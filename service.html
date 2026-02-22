@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kiskan - Law Firm </title>
+    <meta name="description" content="Kiskan Law Africa for Lawyer." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="canonical" href="Replace_with_your_PAGE_URL" />
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/flaticon.css" rel="stylesheet"> -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">-
+    <link href="css/header-buttons.css" rel="stylesheet">
+    <link href="css/sticky-header.css" rel="stylesheet">
+    <link href="css/banner.css" rel="stylesheet">
+    <link href="css/modern-hero.css" rel="stylesheet">
+    <link href="css/text-animations.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+    <!-- Font Awesome already included in head -->
+
+    <!-- Open Graph (OG) meta tags are snippets of code that control how URLs are displayed when shared on social media  -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kiskan - Law Firm " />
+    <meta property="og:url" content="PAGE_URL" />
+    <meta property="og:site_name" content="SITE_NAME" />
+    <!-- For the og:image content, replace the # with a link of an image -->
+    <meta property="og:image" content="#" />
+    <meta property="og:description" content="Kiskan Law Africa for Lawyer." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Linearicons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+
+    <!-- Flaticon -->
+    <!-- <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+
+    <!-- Elegant Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/implexsoft/elegant-icons@main/style.css">
+
+    <!-- Icofont -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css">
+    
+    <style>
+        /* Style for fallback Font Awesome checkmark icons */
+        .about-block .inner-box .icon .fa-check {
+            font-size: 32px;
+            color: #d5aa6d; /* Match your theme color */
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        /* Team Member Modal Styles */
+        .team-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .team-modal-content {
+            background: linear-gradient(135deg, #263438 0%, #324248 100%);
+            margin: 3% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            animation: slideDown 0.4s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: #fff;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.3);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-close:hover,
+        .modal-close:focus {
+            background: rgba(213, 170, 109, 0.9);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #1a2326 0%, #263438 100%);
+            padding: 40px 30px 30px;
+            border-radius: 15px 15px 0 0;
+            text-align: center;
+            border-bottom: 3px solid #d5aa6d;
+        }
+
+        .modal-header h2 {
+            color: #d5aa6d;
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .modal-header h3 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+
+        .modal-body {
+            padding: 40px 50px;
+            color: #fff;
+        }
+
+        .modal-section {
+            margin-bottom: 35px;
+        }
+
+        .modal-section-title {
+            color: #d5aa6d;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid rgba(213, 170, 109, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .modal-section-title i {
+            margin-right: 12px;
+            font-size: 24px;
+        }
+
+        .modal-section-content {
+            color: #e8e8e8;
+            font-size: 15px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .modal-section-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .modal-section-content ul li {
+            padding: 8px 0 8px 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .modal-section-content ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #d5aa6d;
+            font-size: 14px;
+        }
+
+        /* Make team member clickable */
+        .team-block .image {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .team-block .image:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-block h3 a {
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .team-block h3 a:hover {
+            color: #d5aa6d;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .team-modal-content {
+                width: 95%;
+                margin: 5% auto;
+                max-height: 85vh;
+            }
+
+            .modal-body {
+                padding: 30px 25px;
+            }
+
+            .modal-header h2 {
+                font-size: 26px;
+            }
+
+            .modal-section-title {
+                font-size: 18px;
+            }
+
+            .modal-close {
+                right: 15px;
+                top: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 28px;
+            }
+        }
+
+        /* Custom scrollbar for modal */
+        .team-modal-content::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .team-modal-content::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .team-modal-content::-webkit-scrollbar-thumb {
+            background: #d5aa6d;
+            border-radius: 10px;
+        }
+
+        .team-modal-content::-webkit-scrollbar-thumb:hover {
+            background: #c49a5d;
+        }
+    </style>
+
+    <!-- Add site Favicon -->
+    <link rel="shortcut icon" href="public/favicon.png" type="image/x-icon">
+    <link rel="icon" href="public/favicon.png" type="image/x-icon">
+    <meta name="msapplication-TileImage" content="public/favicon.png" />
+
+    <!-- Structured Data  -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Replace_with_your_site_title",
+            "url": "Replace_with_your_site_URL"
+        }
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5JCTSSF');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JCTSSF" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="page-wrapper">
+
+        <!-- Main Header-->
+        <header class="main-header">
+
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+
+                        <div class="inner-content">
+                        <!-- Top Left -->
+                        <div class="top-left">
+                            <div class="text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Applewood Adams, Ngong Rd
+                            </div>
+                        </div>
+
+                        <!-- Top Right -->
+                        <div class="top-right">
+                            <!-- Info List -->
+                            <ul class="info-list">
+                                <li>
+                                    <a href="mailto:info@kiskanlawafrica.co.ke" class="email-btn">
+                                        <i class="fa-regular fa-envelope"></i>
+                                        <span>Email us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+254758409619" class="phone-btn">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <span>+254 758 409 619</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="clearfix">
+
+                        <div class="pull-left logo-box" style="padding: 10px 0;">
+                            <div class="logo"><a href="index.html"><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law" style="transition: transform 0.3s ease;"></a></div>
+                            <div class="logo-two"><a href="index.html"><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law" style="transition: transform 0.3s ease;"></a></div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Mobile Navigation Toggler -->
+                            <div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars"></span></div>
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-md">
+                                <div class="navbar-header">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+                                </div>
+
+                                <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation left-nav clearfix">
+
+                                        <li class="current"><a href="index.html">Home</a></li>
+                                        <li class="dropdown"><a href="#">Our Story</a>
+                                            <ul>
+                                                <li><a href="about.html">The Firm</a></li>
+                                                <li><a href="practice-areas.html">Practice Areas</a></li>
+                                                <li><a href="service.html">People & Culture</a></li>
+                                                <li><a href="service-detail.html">Portfolio</a></li>
+                                                <li><a href="partnerships.html">Partnerships & CSR</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="navigation right-nav clearfix">
+                                    <li class="dropdown"><a href="#">Insights</a>
+                                        <ul>
+                                            <li><a href="blog.html">Our Blog</a></li>
+                                            <li><a href="https://bemihblogger.blogspot.com/" target="_blank">Legal Developments</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                </div>
+
+                            </nav>
+
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="http://www.linkedin.com/in/kiskan-law-africa-llp-advocates-52954a382"><span class="fa-brands fa-linkedin"></span></a></li>
+                            </ul>
+
+                            <!-- Outer Box -->
+                            <div class="outer-box" style="margin-left: 15px;">
+                                <a href="#consultation-section" class="theme-btn btn-style-one" data-action="book-appointment" style="padding: 8px 15px; font-size: 14px; line-height: 1.4; margin-top: -5px;">
+                                    <span class="txt">Book an Appointment</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon lnr lnr-cross"></span></div>
+
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="index.html"><img src="public/logo.png" alt="" title=""></a></div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                </nav>
+            </div>
+            <!-- End Mobile Menu -->
+
+        </header>
+        <!--End Main Header -->
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="auto-container">
+                <div class="sec-title light centered">
+                    <div class="title"></div>
+                    <h2></h2>
+                </div>
+                <div class="sec-title light centered">
+                    <div class="title"></div>
+                    <h2></h2>
+                </div>
+                <!-- Sec Title -->
+                <div class="sec-title light centered">
+                    <div class="title">meet our team</div>
+                    <h2>Dedicated & Devoted</h2>
+                </div>
+                
+                <!-- Team Search and Filter -->
+                <div class="team-search-filter" style="max-width: 800px; margin: 0 auto 40px;">
+                    <div class="row clearfix" style="align-items: center;">
+                        <div class="col-lg-7 col-md-6 col-sm-12" style="margin-bottom: 15px;">
+                            <div class="search-box" style="position: relative;">
+                                <input type="text" id="teamSearch" placeholder="Search by name..." 
+                                    style="width: 100%; padding: 15px 50px 15px 20px; border: 2px solid rgba(213, 170, 109, 0.3); 
+                                    border-radius: 50px; background: rgba(255, 255, 255, 0.95); color: #333; font-size: 16px; 
+                                    font-family: 'DM Sans', sans-serif; transition: all 0.3s ease; outline: none;"
+                                    onkeyup="filterTeam()"
+                                    onfocus="this.style.borderColor='#d5aa6d'; this.style.background='#fff';"
+                                    onblur="this.style.borderColor='rgba(213, 170, 109, 0.3)'; this.style.background='rgba(255, 255, 255, 0.95)';">
+                                <i class="fa-solid fa-search" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); 
+                                    color: #d5aa6d; font-size: 18px; pointer-events: none;"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-sm-12" style="margin-bottom: 15px;">
+                            <select id="roleFilter" 
+                                style="width: 100%; padding: 15px 40px 15px 20px; border: 2px solid rgba(213, 170, 109, 0.3); 
+                                border-radius: 50px; background: rgba(255, 255, 255, 0.95); color: #333; font-size: 16px; 
+                                font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.3s ease; outline: none;
+                                appearance: none; -webkit-appearance: none; -moz-appearance: none;
+                                background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%23d5aa6d%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e');
+                                background-repeat: no-repeat; background-position: right 15px center; background-size: 20px;"
+                                onchange="filterTeam()"
+                                onfocus="this.style.borderColor='#d5aa6d'; this.style.background='#fff';"
+                                onblur="this.style.borderColor='rgba(213, 170, 109, 0.3)'; this.style.background='rgba(255, 255, 255, 0.95)';">
+                                <option value="all">All Roles</option>
+                                <option value="Managing Partner">Managing Partner</option>
+                                <option value="Partner">Partner</option>
+                                <option value="Associate Advocate">Associate Advocate</option>
+                                <option value="Consultant">Consultant</option>
+                                <option value="Legal Secretary">Legal Secretary</option>
+                                <option value="Clerk">Clerk & Mediator</option>
+                                <option value="Mediator">Mediator</option>
+                                <option value="Accountant">Accountant</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="noResults" style="display: none; text-align: center; padding: 30px; color: #d5aa6d; 
+                        font-size: 18px; font-family: 'DM Sans', sans-serif;">
+                        <i class="fa-solid fa-user-slash" style="font-size: 48px; margin-bottom: 15px; display: block;"></i>
+                        No team members found matching your criteria.
+                    </div>
+                </div>
+                
+                <!-- Swiper -->
+                <div class="team-carousel swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('bemih')">
+                                        <img src="public/resource/1.png" alt="Bemih Kanyonge" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('bemih')">Bemih Kanyonge</a></h3>
+                                        <div class="text">Managing Partner, Advocate</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('kiprop')">
+                                        <img src="public/resource/2.png" alt="Kisabit Kiprop" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('kiprop')">Kisabit Kiprop</a></h3>
+                                        <div class="text">Partner, Advocate</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('mwikali')">
+                                        <img src="public/resource/7.png" alt="Mwikali Kasyoka" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('mwikali')">Mwikali Kasyoka</a></h3>
+                                        <div class="text">Associate Advocate</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('nicole')">
+                                        <img src="public/resource/3.png" alt="Nicole Msando" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('nicole')">Nicole Msando</a></h3>
+                                        <div class="text">Associate Advocate</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('loitoong')">
+                                        <img src="public/resource/4.png" alt="Loitoong Lenaitorono" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('loitoong')">Loitoong Lenaitorono</a></h3>
+                                        <div class="text">Associate Advocate</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('maureen')">
+                                        <img src="public/resource/6.png" alt="Maureen Kanyoi" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('maureen')">Maureen Kanyoi</a></h3>
+                                        <div class="text">Legal Secretary</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                        <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('jeirus')">
+                                        <img src="public/resource/5.png" alt="Jeirus Omondi" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('jeirus')">Jeirus Omondi</a></h3>
+                                        <div class="text">Clerk & Mediator</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                      <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('mwikali')">
+                                        <img src="public/resource/7.png" alt="Mwikali Kasyoka" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('mwikali')">Mwikali Kasyoka</a></h3>
+                                        <div class="text">Associate Advocate</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                       <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('ferd')">
+                                        <img src="public/resource/8.png" alt="Ferd Moyomba" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('ferd')">Ferd Moyomba</a></h3>
+                                        <div class="text">Mediator</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                      <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('carol')">
+                                        <img src="public/resource/7.png" alt="Carol Mburugu" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('carol')">Carol Mburugu</a></h3>
+                                        <div class="text">Consultant Advocate</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                       <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('simon')">
+                                        <img src="public/resource/8.png" alt="Simon Konzolo" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('simon')">Simon Konzolo</a></h3>
+                                        <div class="text">Consultant</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+
+                            <!-- Team Block -->
+                            <div class="team-block">
+                                <div class="inner-box">
+                                    <div class="image" onclick="openTeamModal('bonface')">
+                                        <img src="public/resource/8.png" alt="Bonface Lukwa" />
+                                    </div>
+                                    <div class="lower-content">
+                                        <h3><a href="javascript:void(0)" onclick="openTeamModal('bonface')">Bonface Lukwa</a></h3>
+                                        <div class="text">Accountant</div>
+                                        <!-- Social Box -->
+                                        <ul class="social-box">
+                                            <li><a href="https://twitter.com/"><span class="fa-brands fa-twitter"></span></a></li>
+                                            <li><a href="https://www.linkedin.com/"><span class="fa-brands fa-linkedin"></span></a></li>
+                                            <li><a href="https://www.instagram.com/"><span class="fa-brands fa-instagram"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Team Section -->
+
+        <!-- consulation Section -->
+        <section class="consulation-section">
+            <div class="auto-container">
+                <div class="sec-title centered">
+                    <div class="title">get a quotes</div>
+                    <h2>Request a free consultation</h2>
+                </div>
+                <div class="inner-container">
+
+                    <!-- consulation Form -->
+                    <div class="consulation-form">
+                        <!-- consulation Form -->
+                        <form method="post" action="sendemail.php" id="contact-form">
+                            <div class="row clearfix">
+                                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                                    <select name="country" class="custom-select-box">
+									<option>Select practice areas</option>
+									<option>Public Interest & Constitutional Litigation</option>
+									<option>Real Estate Planning & Environmental Law</option>
+									<option>Employment & Labour Relations</option>
+									<option>Intellectual Property</option>
+									<option>Corporate & Commercial Law</option>
+									<option>Private Client & Succession</option>
+								</select>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 col-sm-12 form-group">
+                                    <input type="text" name="name" placeholder="Your Name" required>
+                                </div>
+
+                                <div class="col-lg-4 col-md-12 col-sm-12 form-group">
+                                    <input type="email" name="email" placeholder="Email Address" required>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                    <textarea name="message" placeholder="Here goes your message"></textarea>
+                                </div>
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 text-center form-group">
+                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">send message</span></button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- End consulation Form -->
+
+                </div>
+            </div>
+        </section>
+        <!-- End consulation Section -->
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="background-image: url(public/background/1.jpg)">
+            <div class="auto-container">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <div class="title">No Obligation. Free consulation</div>
+                        <a class="phone" href="tel:+0014-323-68-48">(+254) 758 409 619</a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Contact Us</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End CTA Section -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="auto-container">
+                <ul class="footer-nav">
+                    <li><a href="about.html">The Firm</a></li>
+                    <li><a href="practice-areas.html">Practice Areas</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Reviews & Media</a></li>
+                </ul>
+                <div class="copyright">&copy; 2025 Kiskan Law Africa. All Rights Reserved.</div>
+                <div class="copyright" style="font-size: 0.85em; margin-top: 5px;">Powered by <a href="https://techcrast.co.ke/" target="_blank" style="color: inherit; text-decoration: underline;">Techcrast</a></div>
+            </div>
+        </footer>
+        <!-- End Main Footer -->
+
+    </div>
+    <!--End pagewrapper-->
+
+    <!-- Team Member Modals -->
+    
+    <!-- Kiprop Modal -->
+    <div id="kiprop-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('kiprop')">&times;</span>
+            <div class="modal-header">
+                <h2>Kisabit Kiprop</h2>
+                <h3>Partner, Advocate</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Kiprop is the Firm's senior-most partner. He has vast experience working in and with Civil Society and the Public Sector. He has extensive experience offering a wide range of legal solution to government departments and Non-governmental Organizations.</p>
+                        <p>He has over the last 10 years been advisor to the Presidency. He has vast knowledge of the public sector landscape, public policy and inter-governmental relations. He has reviewed and drafted policy and proposed legislation touching on different sectors of Kenya's Economy.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-certificate"></i> Professional Qualifications
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Admitted as an Advocate of the High Court of Kenya (2010)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Kenya School of Law, Diploma in Law</li>
+                            <li>Makerere University, Bachelor of Laws, LL.B Hons.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-users"></i> Memberships
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Law Society of Kenya</li>
+                            <li>East Africa Law Society</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bemih Modal -->
+    <div id="bemih-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('bemih')">&times;</span>
+            <div class="modal-header">
+                <h2>Bemih Kanyonge</h2>
+                <h3>Managing Partner, Advocate</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Bemih is an Advocate of the High Court of Kenya. He has experience working in civil society, private practice and public sector. He has extensive experience in land transactions & dispute, construction disputes resolution, commercial and tax advisory and litigation, civil and criminal litigation and has been involved in public interest litigation. He has also appeared before tribunals most notably The Sports Tribunal, The Tax Appeals Tribunal, and the Business Premises Tribunal etc.</p>
+                        <p>He has previously consulted for and worked with Trade Mark Africa (TMA), State Department for East African Affairs, Amnesty International, Transparency International-Kenya, Legal Resources Foundation, East Africa Centre for Human Rights, Nairobi City County, Muthaura Mugambi Ayugi & Njonjo (MMAN) Advocates, Kinuthia Kahindi & Co. Advocates, Kituo cha Sheria and The Open Society Foundations, Budapest, Hungary – an international non-governmental organisation. Bemih has over 15 years work experience.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-certificate"></i> Professional Qualifications
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Admitted as an Advocate of the High Court of Kenya (2012)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Certified Professional Coach (CPC – CDI Africa Coaching Group)</li>
+                            <li>Certificate in Leadership (BYE – Ford Foundation Fellow)</li>
+                            <li>Central European University, Master of Laws, LL.M Hons. – Human Rights and Comparative Constitutional Law</li>
+                            <li>Kenya School of Law, Diploma in Law</li>
+                            <li>Moi University, Bachelor of Laws, LL.B Hons.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-users"></i> Memberships
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Law Society of Kenya</li>
+                            <li>East Africa Law Society</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nicole Modal -->
+    <div id="nicole-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('nicole')">&times;</span>
+            <div class="modal-header">
+                <h2>Nicole Msando</h2>
+                <h3>Associate Advocate</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Nicole is an Advocate of the High Court of Kenya. She handles various matters spanning the scope of Civil Litigation, Employment and Labour matters, Family and Conveyancing. She has a deep understanding of these areas and excels at navigating complex legal processes.</p>
+                        <p>She possesses the skills and acumen necessary to deliver effective solutions and combined with her strong analytical and problem solving abilities; she is not only a valuable asset to the firm but also the profession.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-certificate"></i> Professional Qualifications
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Admitted as an Advocate of the High Court of Kenya (2022)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Kenya School of Law, Diploma in Law</li>
+                            <li>Africa Nazarene University, Bachelor of Laws degree, LL.B. Hons.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-users"></i> Memberships
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Law Society of Kenya</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loitoong Modal -->
+    <div id="loitoong-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('loitoong')">&times;</span>
+            <div class="modal-header">
+                <h2>Loitoong Lenaitorono</h2>
+                <h3>Associate Advocate</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Loitoong is an Advocate of the High Court of Kenya. He has a stellar academic background in law and a passion for excellence in legal practice. He holds a Bachelor of Laws Degree from the University of Nairobi. He has a passion for Corporate Governance, Data Protection, Dispute Resolution, Corporate and Commercial Law, and offering counsel on general legal matters.</p>
+                        <p>He handles various matters spanning the scope of Criminal Litigation, Civil Litigation and Employment and Labour matters. He possesses the skills and acumen necessary to deliver effective solutions and combined with his strong analytical and problem solving abilities. He is not only a valuable asset to the firm but also the profession.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-certificate"></i> Professional Qualifications
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Admitted as an Advocate of the High Court of Kenya (2024)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Kenya School of Law, Diploma in Law</li>
+                            <li>The University of Nairobi, Bachelor of Laws, LL.B Hons.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-users"></i> Memberships
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Law Society of Kenya</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Maureen Modal -->
+    <div id="maureen-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('maureen')">&times;</span>
+            <div class="modal-header">
+                <h2>Maureen Kanyoi</h2>
+                <h3>Legal Secretary</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Maureen is the firm's Legal Secretary. She has great office management, administration and client care skills. She has previously worked with George N. Kimani & Company Advocates and Tim Okwaro Associates Advocates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jeirus Modal -->
+    <div id="jeirus-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('jeirus')">&times;</span>
+            <div class="modal-header">
+                <h2>Jeirus Omondi Ooko</h2>
+                <h3>Clerk & Mediator</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Jeirus Omondi Ooko is a Certified Professional Mediator and experienced Court Assistant with over ten years of hands-on involvement in court processes and dispute resolution. He has built a strong reputation for professionalism, integrity, and efficiency within the justice system.</p>
+                        <p>With extensive experience supporting court operations, Jeirus is adept at case management, document handling, legal procedure navigation, and facilitating smooth communication among judicial officers, litigants, and court users. His background in mediation equips him with exceptional conflict-resolution skills, allowing him to handle sensitive matters with neutrality, empathy, and discretion.</p>
+                        <p>Jeirus is committed to promoting access to justice and ensuring timely, orderly, and fair court processes. His blend of technical expertise, practical experience, and interpersonal skills makes him a valuable asset in judicial administration and alternative dispute resolution.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-certificate"></i> Professional Qualifications
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Certified Professional Mediator</li>
+                            <li>Over 10 years of experience in court processes and legal support functions</li>
+                            <li>Experienced Court Assistant with expertise in judicial administration</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-briefcase"></i> Core Competencies
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Case management and document handling</li>
+                            <li>Legal procedure navigation</li>
+                            <li>Alternative dispute resolution and mediation</li>
+                            <li>Communication facilitation among judicial officers, litigants, and court users</li>
+                            <li>Conflict resolution with neutrality, empathy, and discretion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mwikali Modal -->
+    <div id="mwikali-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('mwikali')">&times;</span>
+            <div class="modal-header">
+                <h2>Mwikali Kasyoka</h2>
+                <h3>Associate Advocate</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Mwikali is an Advocate of the High Court of Kenya. She has expertise in working with financial institutions such as banks, saccos, microfinance institutions and insurance companies. She has represented local banks both in litigation and commercial transactions. She has expertise in advising startups in fintech through drafting agreements and offering legal opinions.</p>
+                        <p>Prior to joining our team Mwikali was an associate at Musyimi & Company Advocates and Oraro & Company Advocates. She has also previously volunteered with HAART Kenya, Jipange Youth Group and National Transport and Safety Authority.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-certificate"></i> Professional Qualifications
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Admitted as an Advocate of the High Court of Kenya (2020)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Kenya School of Law, Diploma in Law</li>
+                            <li>The University of Nairobi, Bachelor of Laws, LL.B Hons.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-users"></i> Memberships
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Law Society of Kenya</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-briefcase"></i> Experience
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>She has represented NCBA in contentious litigation matters and commercial transactions involving the merger of NIC with CBA Bank, accidental claims and recovery of debt.</li>
+                            <li>She has assisted in research and litigation matters involving the Central Bank of Kenya especially in commercial law matters.</li>
+                            <li>She has carried out debt collection for the Bank of Africa on secured and unsecured loans.</li>
+                            <li>She has represented National Bank of Kenya in complex and contentious litigation matters involving employment, fraud, recovery of debt and e-banking transactions.</li>
+                            <li>She has represented KDIC on insolvency matters involving Chase Bank and Imperial Bank.</li>
+                            <li>She has assisted in conducting research and representation of Kenya Commercial Bank of Kenya in complex commercial transactions and litigation matters involving the Bank and their clients.</li>
+                            <li>She has conducted research and offered advice on infringement of privacy on data protection.</li>
+                            <li>She has conducted research and drafted agreements involving Fintech Start Ups in Kenya.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ferd Modal -->
+    <div id="ferd-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('ferd')">&times;</span>
+            <div class="modal-header">
+                <h2>Ferd Moyomba</h2>
+                <h3>Mediator</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Ferd is a trained mediator with vast experience in Alternative Dispute Resolution. He has vast experience as a researcher and project manager. He has experience working in civil society as well as in academia.</p>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-certificate"></i> Professional Qualifications
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Lawyer and Certified Mediator</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="modal-section-content">
+                        <ul>
+                            <li>Certified Professional Mediator (MTI-Africa)</li>
+                            <li>Post graduate Diploma in Business Management (All India Council of Management Studies)</li>
+                            <li>Master of Laws – LL.M (Dr. Babasaheb Ambedkar Marathwada University, India)</li>
+                            <li>Bachelor of Laws - LL.B (Dr. Babasaheb Ambedkar Marathwada University, India)</li>
+                            <li>Bachelor of Social Legislation – BSL (Dr. Babasaheb Ambedkar Marathwada University, India)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carol Modal -->
+    <div id="carol-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('carol')">&times;</span>
+            <div class="modal-header">
+                <h2>Carol Mburugu</h2>
+                <h3>Consultant Advocate</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Carol is a consultant and former partner of the Firm. Carol works as a Deputy Commissioner – Litigation Services with the Kenya Revenue Authority (KRA). She has vast experience in Civil and Criminal Litigation. She has been involved in successful public interest litigation and class action cases.</p>
+                        <p>She is also strong on legal drafting, conveyancing, and has over the past 8 years increased her capacity in the field of tax related litigation and arbitration. She previously worked for the Firm of Kioko Munyithya Ngugi & Co. Advocates and Kituo cha Sheria- Kenya's oldest legal aid organisation. In 2013, Carol was named as Law Society of Kenya's Pro Bono Lawyer of the Year having immensely contributed her professional services to poor and marginalized Kenyans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Simon Modal -->
+    <div id="simon-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('simon')">&times;</span>
+            <div class="modal-header">
+                <h2>Simon Konzolo</h2>
+                <h3>Consultant</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Simon is trained lawyer, Forced Migration Expert, Trade Policy Specialist. He has over 17 years hands on experience working with civil society, national, regional and international NGO's. He currently works with Trade Mark East Africa (TMEA). He has vast knowledge on managing coalitions, networks and influencing policy reforms within the region and Kenya.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bonface Modal -->
+    <div id="bonface-modal" class="team-modal">
+        <div class="team-modal-content">
+            <span class="modal-close" onclick="closeTeamModal('bonface')">&times;</span>
+            <div class="modal-header">
+                <h2>Bonface Lukwa</h2>
+                <h3>Accountant</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-user"></i> Biography
+                    </div>
+                    <div class="modal-section-content">
+                        <p>Bonface is the firm's Accountant. He is a Bachelor of Commerce Degree holder from Kenyatta University and a CPA from KCA University. He has experience in Accounts, Financial Management, Internal controls, Audit, Tax Management, and Tax Advisory.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Team Member Modals -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa-solid fa-circle-arrow-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sticky-header.js"></script>
+    <script src="js/team-slider.js"></script>
+    <script src="js/contact-form.js"></script>
+
+    <!-- Team Modal Scripts -->
+    <script>
+        // Function to open team member modal
+        function openTeamModal(memberId) {
+            var modal = document.getElementById(memberId + '-modal');
+            if (modal) {
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
+        }
+
+        // Function to close team member modal
+        function closeTeamModal(memberId) {
+            var modal = document.getElementById(memberId + '-modal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('team-modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            }
+        }
+
+        // Close modal on ESC key press
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                var modals = document.getElementsByClassName('team-modal');
+                for (var i = 0; i < modals.length; i++) {
+                    if (modals[i].style.display === 'block') {
+                        modals[i].style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                }
+            }
+        });
+
+        // Team Search and Filter Function
+        function filterTeam() {
+            var searchInput = document.getElementById('teamSearch').value.toLowerCase();
+            var roleFilter = document.getElementById('roleFilter').value.toLowerCase();
+            var slides = document.querySelectorAll('.team-carousel .swiper-slide');
+            var visibleCount = 0;
+            var seenNames = {}; // Track names to avoid duplicates
+
+            slides.forEach(function(slide) {
+                var teamBlock = slide.querySelector('.team-block');
+                if (teamBlock) {
+                    var nameElement = teamBlock.querySelector('h3 a');
+                    var roleElement = teamBlock.querySelector('.lower-content .text');
+                    
+                    if (nameElement && roleElement) {
+                        var name = nameElement.textContent.toLowerCase();
+                        var role = roleElement.textContent.toLowerCase();
+                        
+                        var nameMatch = name.includes(searchInput);
+                        var roleMatch = roleFilter === 'all' || role.includes(roleFilter);
+                        
+                        // Check if this name was already shown (to avoid duplicates)
+                        var isDuplicate = seenNames[name] === true;
+                        
+                        if (nameMatch && roleMatch && !isDuplicate) {
+                            slide.style.display = 'block';
+                            seenNames[name] = true;
+                            visibleCount++;
+                        } else {
+                            slide.style.display = 'none';
+                        }
+                    }
+                }
+            });
+
+            // Show/hide "no results" message and adjust layout
+            var noResults = document.getElementById('noResults');
+            var carousel = document.querySelector('.team-carousel');
+            var carouselWrapper = document.querySelector('.team-carousel .swiper-wrapper');
+            
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+                if (carousel) carousel.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                if (carousel) carousel.style.display = 'block';
+                
+                // Center single result
+                if (visibleCount === 1 && carouselWrapper) {
+                    carouselWrapper.style.justifyContent = 'center';
+                } else if (carouselWrapper) {
+                    carouselWrapper.style.justifyContent = 'flex-start';
+                }
+            }
+
+            // Update Swiper after filtering
+            if (window.teamSwiper && visibleCount > 0) {
+                window.teamSwiper.update();
+            }
+        }
+
+        // Store swiper instance globally for filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for team-slider.js to initialize, then store reference
+            setTimeout(function() {
+                if (typeof Swiper !== 'undefined' && document.querySelector('.team-carousel')) {
+                    var swiperInstance = document.querySelector('.team-carousel').swiper;
+                    if (swiperInstance) {
+                        window.teamSwiper = swiperInstance;
+                    }
+                }
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>

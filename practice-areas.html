@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Practice Areas - Kiskan Law Africa</title>
+    <meta name="description" content="Comprehensive legal services across multiple practice areas including Constitutional Litigation, Real Estate, Employment Law, Intellectual Property, Corporate Law, and Private Client Services." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="canonical" href="Replace_with_your_PAGE_URL" />
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/header-buttons.css" rel="stylesheet">
+    <link href="css/sticky-header.css" rel="stylesheet">
+    <link href="css/banner.css" rel="stylesheet">
+    <link href="css/modern-hero.css" rel="stylesheet">
+    <link href="css/text-animations.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+
+    <!-- Open Graph (OG) meta tags -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Practice Areas - Kiskan Law Africa" />
+    <meta property="og:url" content="PAGE_URL" />
+    <meta property="og:site_name" content="Kiskan Law Africa" />
+    <meta property="og:image" content="#" />
+    <meta property="og:description" content="Comprehensive legal services across multiple practice areas." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Linearicons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+
+    <!-- Flaticon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+
+    <!-- Elegant Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/implexsoft/elegant-icons@main/style.css">
+
+    <!-- Icofont -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css">
+    
+    <style>
+        .practice-area-detail {
+            background: #fff;
+            padding: 60px 0;
+        }
+        
+        .practice-area-block {
+            margin-bottom: 80px;
+            padding: 40px;
+            background: #f8f9fa;
+            border-left: 5px solid #d5aa6d;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .practice-area-block:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        
+        .practice-area-block .icon-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .practice-area-block .icon-box .icon {
+            font-size: 60px;
+            color: #d5aa6d;
+            margin-bottom: 20px;
+        }
+        
+        .practice-area-block h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #263438;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .practice-area-block .description {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        
+        .practice-area-block .services-list {
+            margin-top: 30px;
+        }
+        
+        .practice-area-block .services-list h4 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #263438;
+            margin-bottom: 20px;
+        }
+        
+        .practice-area-block .services-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .practice-area-block .services-list ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .practice-area-block .services-list ul li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #d5aa6d;
+            font-size: 14px;
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, #263438 0%, #324248 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .page-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .page-header .breadcrumb {
+            background: transparent;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .page-header .breadcrumb a {
+            color: #d5aa6d;
+            text-decoration: none;
+        }
+        
+        .page-header .breadcrumb-item.active {
+            color: #fff;
+        }
+        
+        .intro-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .intro-section h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #263438;
+            margin-bottom: 30px;
+        }
+        
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .practice-area-block {
+                padding: 30px 20px;
+            }
+            
+            .practice-area-block h3 {
+                font-size: 26px;
+            }
+            
+            .page-header h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+      <div class="page-wrapper">
+
+        <!-- Main Header-->
+        <header class="main-header">
+
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+
+                        <div class="inner-content">
+                        <!-- Top Left -->
+                        <div class="top-left">
+                            <div class="text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Applewood Adams, Ngong Rd
+                            </div>
+                        </div>
+
+                        <!-- Top Right -->
+                        <div class="top-right">
+                            <!-- Info List -->
+                            <ul class="info-list">
+                                <li>
+                                    <a href="mailto:info@kiskanlawafrica.co.ke" class="email-btn">
+                                        <i class="fa-regular fa-envelope"></i>
+                                        <span>Email us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+254758409619" class="phone-btn">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <span>+254 758 409 619</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+
+                       <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="clearfix">
+
+                        <div class="pull-left logo-box" style="padding: 10px 0;">
+                            <div class="logo"><a href="index.html"><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law" style="transition: transform 0.3s ease;"></a></div>
+                            <div class="logo-two"><a href="index.html"><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law" style="transition: transform 0.3s ease;"></a></div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Mobile Navigation Toggler -->
+                            <div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars"></span></div>
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-md">
+                                <div class="navbar-header">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+                                </div>
+
+                                <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation left-nav clearfix">
+
+                                        <li class="current"><a href="index.html">Home</a></li>
+                                        <li class="dropdown"><a href="#">Our Story</a>
+                                            <ul>
+                                                <li><a href="about.html">The Firm</a></li>
+                                                <li><a href="practice-areas.html">Practice Areas</a></li>
+                                                <li><a href="service.html">People & Culture</a></li>
+                                                <li><a href="service-detail.html">Portfolio</a></li>
+                                                <li><a href="partnerships.html">Partnerships & CSR</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="navigation right-nav clearfix">
+                                      <li class="dropdown"><a href="#">Insights</a>
+                                        <ul>
+                                            <li><a href="blog.html">Our Blog</a></li>
+                                            <li><a href="https://bemihblogger.blogspot.com/" target="_blank">Legal Developments</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                        </ul>
+                                    </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+
+                                </div>
+
+                            </nav>
+
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="http://www.linkedin.com/in/kiskan-law-africa-llp-advocates-52954a382"><span class="fa-brands fa-linkedin"></span></a></li>
+                            </ul>
+
+                            <!-- Outer Box -->
+                            <div class="outer-box" style="margin-left: 15px;">
+                                <a href="#consultation-section" class="theme-btn btn-style-one" data-action="book-appointment" style="padding: 8px 15px; font-size: 14px; line-height: 1.4; margin-top: -5px;">
+                                    <span class="txt">Book an Appointment</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="index.html" title=""><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law"></a>
+                    </div>
+                    <!--Right Col-->
+                    <div class="pull-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-collapse show collapse clearfix">
+                                <ul class="navigation left-nav clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="dropdown current"><a href="#">Our Story</a>
+                                        <ul>
+                                            <li><a href="about.html">The Firm</a></li>
+                                            <li><a href="practice-areas.html">Practice Areas</a></li>
+                                            <li><a href="service.html">People & Culture</a></li>
+                                            <li><a href="service-detail.html">Portfolio</a></li>
+                                            <li><a href="partnerships.html">Partnerships & CSR</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <ul class="navigation right-nav clearfix">
+                                    <li class="dropdown"><a href="#">Insights</a>
+                                        <ul>
+                                            <li><a href="blog.html">Our Blog</a></li>
+                                            <li><a href="https://bemihblogger.blogspot.com/" target="_blank">Legal Developments</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                    </div>
+
+                </div>
+            </div><!-- End Sticky Menu -->
+
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon fa fa-close"></span></div>
+
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="index.html"><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law"></a></div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                </nav>
+            </div><!-- End Mobile Menu -->
+
+        </header>
+        <!-- End Main Header -->
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="auto-container">
+                <h1>Practice Areas</h1>
+                <nav aria-label="breadcrumb">
+                </nav>
+            </div>
+        </section>
+        <!-- End Page Header -->
+
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <div class="auto-container">
+                <h2>Comprehensive Legal Solutions</h2>
+                <p>At Kiskan Law Africa, we offer a wide range of legal services tailored to meet the diverse needs of our clients. Our experienced team of legal professionals brings deep expertise across multiple practice areas, ensuring that whether you're an individual, a business, or a public entity, you receive the highest quality legal representation and counsel. We combine technical excellence with a client-centered approach, delivering practical solutions to complex legal challenges.</p>
+            </div>
+        </section>
+        <!-- End Intro Section -->
+
+        <!-- Practice Area Details Section -->
+        <section class="practice-area-detail">
+            <div class="auto-container">
+
+                <!-- Practice Area 1: Public Interest & Constitutional Litigation -->
+                <div class="practice-area-block" id="constitutional-litigation">
+                    <div class="icon-box">
+                        <span class="icon fa-solid fa-scale-balanced"></span>
+                    </div>
+                    <h3>Public Interest & Constitutional Litigation</h3>
+                    <div class="description">
+                        <p>We are passionate advocates for justice and human rights. Our Public Interest & Constitutional Litigation practice is dedicated to championing fundamental rights and freedoms through strategic litigation that shapes policy and protects the vulnerable. We represent individuals, civil society organizations, and communities in cases that address systemic injustices and constitutional violations.</p>
+                        
+                        <p>Our team has successfully litigated landmark cases in constitutional law, administrative law, and human rights, contributing to the development of progressive jurisprudence in Kenya and across Africa. We believe in using the law as a tool for social change and are committed to ensuring that the promise of constitutional rights is a reality for all.</p>
+                    </div>
+                    <div class="services-list">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>Constitutional interpretation and enforcement</li>
+                            <li>Human rights litigation and advocacy</li>
+                            <li>Judicial review of administrative actions</li>
+                            <li>Public interest litigation on behalf of vulnerable groups</li>
+                            <li>Electoral and political rights disputes</li>
+                            <li>Freedom of information and access to justice cases</li>
+                            <li>Environmental rights litigation</li>
+                            <li>Strategic litigation for policy reform</li>
+                            <li>Advocacy before national and international human rights bodies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Practice Area 2: Real Estate Planning & Environmental Law -->
+                <div class="practice-area-block" id="real-estate-environmental">
+                    <div class="icon-box">
+                        <span class="icon fa-solid fa-building"></span>
+                    </div>
+                    <h3>Real Estate Planning & Environmental Law</h3>
+                    <div class="description">
+                        <p>Our Real Estate Planning & Environmental Law practice provides comprehensive guidance on all aspects of property transactions, land use planning, and environmental compliance. We assist clients in navigating the complex regulatory landscape governing land and environmental matters in Kenya, ensuring that their developments and transactions are legally sound and sustainable.</p>
+                        
+                        <p>From residential to commercial real estate, from environmental impact assessments to climate change litigation, our team combines legal expertise with an understanding of practical market realities. We advise developers, investors, financial institutions, landowners, and government agencies on matters ranging from simple property transfers to complex mixed-use developments and environmental restoration projects.</p>
+                    </div>
+                    <div class="services-list">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>Property acquisition, sales, and lease agreements</li>
+                            <li>Title searches, verification, and registration</li>
+                            <li>Land use planning and zoning compliance</li>
+                            <li>Environmental impact assessments (EIA) and audits</li>
+                            <li>Environmental licensing and regulatory compliance</li>
+                            <li>Real estate financing and mortgage documentation</li>
+                            <li>Property development and construction contracts</li>
+                            <li>Landlord-tenant disputes and eviction proceedings</li>
+                            <li>Land subdivision, amalgamation, and conversion</li>
+                            <li>Climate change adaptation and mitigation legal frameworks</li>
+                            <li>Natural resources management and conservation law</li>
+                            <li>Environmental litigation and dispute resolution</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Practice Area 3: Employment & Labour Relations -->
+                <div class="practice-area-block" id="employment-labour">
+                    <div class="icon-box">
+                        <span class="icon fa-solid fa-briefcase"></span>
+                    </div>
+                    <h3>Employment & Labour Relations</h3>
+                    <div class="description">
+                        <p>In today's dynamic workplace environment, sound employment and labor relations are critical to organizational success. Our Employment & Labour Relations practice provides expert counsel on all workplace matters, helping employers navigate complex labor laws while protecting employee rights. We represent both employers and employees in contentious and non-contentious matters.</p>
+                        
+                        <p>Our team is well-versed in Kenyan employment law, including the Employment Act, Labour Relations Act, and Occupational Safety and Health Act. We provide proactive advisory services to prevent disputes, draft employment contracts and policies that protect our clients' interests, and represent clients before the Employment and Labour Relations Court and industrial arbitration forums.</p>
+                    </div>
+                    <div class="services-list">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>Employment contracts and service agreements drafting</li>
+                            <li>Employee handbooks and workplace policies development</li>
+                            <li>Redundancy, retrenchment, and restructuring advice</li>
+                            <li>Disciplinary procedures and unfair dismissal claims</li>
+                            <li>Workplace discrimination and harassment cases</li>
+                            <li>Collective bargaining and trade union negotiations</li>
+                            <li>Industrial disputes and strike management</li>
+                            <li>Executive compensation and severance agreements</li>
+                            <li>Occupational safety and health compliance</li>
+                            <li>Workers' compensation and industrial injury claims</li>
+                            <li>Immigration and work permit matters for expatriate employees</li>
+                            <li>Employment tribunal and court representation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Practice Area 4: Intellectual Property -->
+                <div class="practice-area-block" id="intellectual-property">
+                    <div class="icon-box">
+                        <span class="icon fa-solid fa-lightbulb"></span>
+                    </div>
+                    <h3>Intellectual Property</h3>
+                    <div class="description">
+                        <p>In the knowledge economy, intellectual property is often a company's most valuable asset. Our Intellectual Property practice helps clients protect, manage, and monetize their innovations, creative works, and brand identities. We provide strategic IP counsel that aligns with our clients' business objectives, from startups to established multinational corporations.</p>
+                        
+                        <p>Our team handles the full spectrum of intellectual property matters, including trademarks, copyrights, patents, industrial designs, trade secrets, and technology licensing. We assist clients in building robust IP portfolios, enforcing their rights against infringement, and navigating the complex landscape of digital IP in the age of artificial intelligence and blockchain technology.</p>
+                    </div>
+                    <div class="services-list">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>Trademark searches, registration, and renewal</li>
+                            <li>Copyright registration and protection</li>
+                            <li>Patent filing and prosecution</li>
+                            <li>Industrial design registration</li>
+                            <li>Trade secret protection strategies</li>
+                            <li>IP portfolio management and audits</li>
+                            <li>Technology transfer and licensing agreements</li>
+                            <li>Franchise agreements and brand licensing</li>
+                            <li>IP enforcement and anti-counterfeiting measures</li>
+                            <li>Domain name disputes and cybersquatting cases</li>
+                            <li>IP litigation and infringement proceedings</li>
+                            <li>Digital content and software licensing</li>
+                            <li>Entertainment law and media rights</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Practice Area 5: Corporate & Commercial Law -->
+                <div class="practice-area-block" id="corporate-commercial">
+                    <div class="icon-box">
+                        <span class="icon fa-solid fa-handshake"></span>
+                    </div>
+                    <h3>Corporate & Commercial Law</h3>
+                    <div class="description">
+                        <p>Our Corporate & Commercial Law practice serves as a trusted advisor to businesses at every stage of their lifecycle. Whether you're a startup seeking incorporation, a growing business negotiating complex commercial contracts, or an established corporation pursuing mergers and acquisitions, we provide strategic legal guidance that drives business success.</p>
+                        
+                        <p>We advise on a wide range of corporate and commercial matters, combining technical legal expertise with practical business acumen. Our team understands that legal solutions must align with commercial realities, and we pride ourselves on delivering efficient, business-focused advice. We represent local and international clients across various industries, including technology, manufacturing, retail, finance, and professional services.</p>
+                    </div>
+                    <div class="services-list">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>Company formation and business registration</li>
+                            <li>Corporate governance and compliance advisory</li>
+                            <li>Shareholders' agreements and joint ventures</li>
+                            <li>Mergers, acquisitions, and business restructuring</li>
+                            <li>Commercial contracts negotiation and drafting</li>
+                            <li>Distribution, agency, and supply agreements</li>
+                            <li>Banking and finance transactions</li>
+                            <li>Private equity and venture capital investments</li>
+                            <li>Securities regulation and capital markets</li>
+                            <li>Insolvency, bankruptcy, and debt recovery</li>
+                            <li>Competition law and antitrust compliance</li>
+                            <li>Corporate dispute resolution and litigation</li>
+                            <li>Foreign investment and cross-border transactions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Practice Area 6: Private Client & Succession -->
+                <div class="practice-area-block" id="private-client-succession">
+                    <div class="icon-box">
+                        <span class="icon fa-solid fa-user-tie"></span>
+                    </div>
+                    <h3>Private Client & Succession</h3>
+                    <div class="description">
+                        <p>Our Private Client & Succession practice provides personalized legal services to individuals and families, helping them manage their wealth, plan for the future, and ensure their legacy is preserved. We understand that private client matters require discretion, sensitivity, and a deep understanding of family dynamics, and we approach each client relationship with the utmost professionalism and confidentiality.</p>
+                        
+                        <p>We advise high-net-worth individuals, families, and trustees on all aspects of private wealth management, estate planning, and succession. Our holistic approach considers not just legal structures but also tax efficiency, asset protection, and the personal goals of our clients. We work closely with financial advisors, accountants, and other professionals to ensure our clients receive comprehensive, coordinated advice.</p>
+                    </div>
+                    <div class="services-list">
+                        <h4>Our Services Include:</h4>
+                        <ul>
+                            <li>Will drafting and estate planning</li>
+                            <li>Trust formation and administration</li>
+                            <li>Succession planning for family businesses</li>
+                            <li>Probate and estate administration</li>
+                            <li>Inheritance disputes and will contests</li>
+                            <li>Family wealth structuring and asset protection</li>
+                            <li>Pre-nuptial and post-nuptial agreements</li>
+                            <li>Divorce, custody, and matrimonial property settlements</li>
+                            <li>Adoption and guardianship matters</li>
+                            <li>Tax planning and wealth preservation strategies</li>
+                            <li>Philanthropy and charitable giving structures</li>
+                            <li>Cross-border succession and international estates</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Practice Area Details Section -->
+
+        <!-- Call to Action Section -->
+        <section class="call-to-action-section" style="background: linear-gradient(135deg, #263438 0%, #324248 100%); padding: 80px 0; text-align: center; color: #fff;">
+            <div class="auto-container">
+                <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px; color: #fff;">Need Legal Assistance?</h2>
+                <p style="font-size: 18px; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Contact us today to discuss your legal needs. Our team of experienced attorneys is ready to provide you with expert guidance and representation.</p>
+                <a href="contact.html" class="theme-btn btn-style-one" style="background: #d5aa6d; color: #fff; padding: 15px 40px; border-radius: 5px; text-decoration: none; display: inline-block; font-weight: 600;"><span class="txt">Get In Touch</span></a>
+            </div>
+        </section>
+        <!-- End Call to Action Section -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="auto-container">
+                <ul class="footer-nav">
+                    <li><a href="about.html">The Firm</a></li>
+                    <li><a href="practice-areas.html">Practice Areas</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Reviews & Media</a></li>
+                </ul>
+                <div class="copyright">&copy; 2025 Kiskan Law Africa. All Rights Reserved.</div>
+                <div class="copyright" style="font-size: 0.85em; margin-top: 5px;">Powered by <a href="https://techcrast.co.ke/" target="_blank" style="color: inherit; text-decoration: underline;">Techcrast</a></div>
+            </div>
+        </footer>
+        <!-- End Main Footer -->
+
+    </div>
+    <!-- End Page Wrapper -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/nav-tool.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/sticky-header.js"></script>
+
+</body>
+
+</html>

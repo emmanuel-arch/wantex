@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kiskan - Law Firm </title>
+    <meta name="description" content="Kiskan Law Africa for Lawyer." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="canonical" href="Replace_with_your_PAGE_URL" />
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="css/flaticon.css" rel="stylesheet"> -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">-
+    <link href="css/header-buttons.css" rel="stylesheet">
+    <link href="css/sticky-header.css" rel="stylesheet">
+    <link href="css/banner.css" rel="stylesheet">
+    <link href="css/modern-hero.css" rel="stylesheet">
+    <link href="css/text-animations.css" rel="stylesheet">
+    <!-- Font Awesome already included in head -->
+
+    <!-- Open Graph (OG) meta tags are snippets of code that control how URLs are displayed when shared on social media  -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kiskan - Law Firm " />
+    <meta property="og:url" content="PAGE_URL" />
+    <meta property="og:site_name" content="SITE_NAME" />
+    <!-- For the og:image content, replace the # with a link of an image -->
+    <meta property="og:image" content="#" />
+    <meta property="og:description" content="Kiskan Law Africa for Lawyer." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Linearicons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+
+    <!-- Flaticon -->
+    <!-- <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+
+    <!-- Elegant Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/implexsoft/elegant-icons@main/style.css">
+
+    <!-- Icofont -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/icofont/1.0.1/icofont.min.css">
+    
+    <style>
+        /* Style for fallback Font Awesome checkmark icons */
+        .about-block .inner-box .icon .fa-check {
+            font-size: 32px;
+            color: #d5aa6d;
+            position: relative;
+            display: inline-block;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        /* Portfolio & Partners Section Styles */
+        .portfolio-intro {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
+            padding: 60px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .portfolio-intro h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #d5aa6d;
+        }
+
+        .portfolio-intro p {
+            font-size: 18px;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            color: #e0e0e0;
+        }
+
+        /* Client Card Styles */
+        .clients-showcase {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .client-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .client-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #d5aa6d, #c49a5d);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .client-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(213, 170, 109, 0.3);
+        }
+
+        .client-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .client-logo-wrapper {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover .client-logo-wrapper {
+            background: #ffffff;
+            transform: scale(1.05);
+        }
+
+        .client-logo-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: grayscale(0);
+            transition: all 0.3s ease;
+        }
+
+        .client-card:hover .client-logo-wrapper img {
+            filter: grayscale(0) brightness(1.1);
+        }
+
+        .client-info {
+            flex-grow: 1;
+        }
+
+        .client-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .client-description {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .client-category {
+            display: inline-block;
+            padding: 6px 15px;
+            background: linear-gradient(135deg, #d5aa6d, #c49a5d);
+            color: #ffffff;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Stats Section */
+        .portfolio-stats {
+            background: linear-gradient(135deg, #263438 0%, #324248 100%);
+            padding: 60px 0;
+            color: #ffffff;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: #d5aa6d;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: #e0e0e0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section Title Styles */
+        .section-title-modern {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title-modern h2 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        .section-title-modern .subtitle {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section-title-modern .title-underline {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d5aa6d, #c49a5d);
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .portfolio-intro h2 {
+                font-size: 32px;
+            }
+
+            .client-name {
+                font-size: 18px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+        }
+    </style>
+
+    <!-- Add site Favicon -->
+    <link rel="shortcut icon" href="public/favicon.png" type="image/x-icon">
+    <link rel="icon" href="public/favicon.png" type="image/x-icon">
+    <meta name="msapplication-TileImage" content="public/favicon.png" />
+
+    <!-- Structured Data  -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Replace_with_your_site_title",
+            "url": "Replace_with_your_site_URL"
+        }
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5JCTSSF');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JCTSSF" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="page-wrapper">
+
+        <!-- Main Header-->
+        <header class="main-header">
+
+            <!-- Header Top -->
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+
+                        <div class="inner-content">
+                        <!-- Top Left -->
+                        <div class="top-left">
+                            <div class="text">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Applewood Adams, Ngong Rd
+                            </div>
+                        </div>
+
+                        <!-- Top Right -->
+                        <div class="top-right">
+                            <!-- Info List -->
+                            <ul class="info-list">
+                                <li>
+                                    <a href="mailto:info@kiskanlawafrica.co.ke" class="email-btn">
+                                        <i class="fa-regular fa-envelope"></i>
+                                        <span>Email us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel:+254758409619" class="phone-btn">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <span>+254 758 409 619</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="clearfix">
+
+                        <div class="pull-left logo-box" style="padding: 10px 0;">
+                            <div class="logo"><a href="index.html"><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law" style="transition: transform 0.3s ease;"></a></div>
+                            <div class="logo-two"><a href="index.html"><img src="public/logo.png" alt="Kiskan Law" title="Kiskan Law" style="transition: transform 0.3s ease;"></a></div>
+                        </div>
+
+                        <div class="nav-outer clearfix">
+                            <!-- Mobile Navigation Toggler -->
+                            <div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars"></span></div>
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-md">
+                                <div class="navbar-header">
+                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+                                </div>
+
+                                <div class="navbar-collapse show collapse clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation left-nav clearfix">
+
+                                        <li class="current"><a href="index.html">Home</a></li>
+                                        <li class="dropdown"><a href="#">Our Story</a>
+                                            <ul>
+                                                <li><a href="about.html">The Firm</a></li>
+                                                <li><a href="practice-areas.html">Practice Areas</a></li>
+                                                <li><a href="service.html">People & Culture</a></li>
+                                                <li><a href="service-detail.html">Portfolio</a></li>
+                                                <li><a href="partnerships.html">Partnerships & CSR</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                     <ul class="navigation right-nav clearfix">
+                                    <li class="dropdown"><a href="#">Insights</a>
+                                        <ul>
+                                            <li><a href="blog.html">Our Blog</a></li>
+                                            <li><a href="https://bemihblogger.blogspot.com/" target="_blank">Legal Developments</a></li>
+                                            <li><a href="careers.html">Careers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+
+                                </div>
+
+                            </nav>
+                            <!-- Social Box -->
+                            <ul class="social-box">
+                                <li><a href="http://www.linkedin.com/in/kiskan-law-africa-llp-advocates-52954a382"><span class="fa-brands fa-linkedin"></span></a></li>
+                            </ul>
+
+                            <!-- Outer Box -->
+                            <div class="outer-box" style="margin-left: 15px;">
+                                <a href="#consultation-section" class="theme-btn btn-style-one" data-action="book-appointment" style="padding: 8px 15px; font-size: 14px; line-height: 1.4; margin-top: -5px;">
+                                    <span class="txt">Book an Appointment</span>
+                                </a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon lnr lnr-cross"></span></div>
+
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="index.html"><img src="public/logo.png" alt="" title=""></a></div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                </nav>
+            </div>
+            <!-- End Mobile Menu -->
+
+        </header>
+        <!--End Main Header -->
+	
+	<!-- Page Title Section -->
+    <section class="page-title-section-two" style="background-image: url(public/main-slider/1.png)">
+		<div class="auto-container">
+			<div class="content-boxed">
+				<div class="title">our partners</div>
+				<h1>Partnerships & CSR</h1>
+				<div class="text">Building lasting relationships with exceptional organizations <br> that drive meaningful change and sustainable growth across East Africa.</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Page Title Section -->
+	
+	<!-- Sidebar Page Container -->
+    <div class="sidebar-page-container">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+				
+				<!-- Content Side -->
+                <div class="content-side col-lg-9 col-md-12 col-sm-12">
+                	<div class="service-detail">
+					<div class="inner-box">
+
+							<!-- Portfolio Statistics -->
+							<div class="portfolio-stats">
+								<div class="row clearfix">
+									<div class="stat-box col-lg-3 col-md-6 col-sm-6">
+										<div class="stat-inner">
+											<div class="stat-number">20+</div>
+											<div class="stat-label">Strategic Partners</div>
+										</div>
+									</div>
+									<div class="stat-box col-lg-3 col-md-6 col-sm-6">
+										<div class="stat-inner">
+											<div class="stat-number">15+</div>
+											<div class="stat-label">Years Experience</div>
+										</div>
+									</div>
+									<div class="stat-box col-lg-3 col-md-6 col-sm-6">
+										<div class="stat-inner">
+											<div class="stat-number">100%</div>
+											<div class="stat-label">Client Satisfaction</div>
+										</div>
+									</div>
+									<div class="stat-box col-lg-3 col-md-6 col-sm-6">
+										<div class="stat-inner">
+											<div class="stat-number">10+</div>
+											<div class="stat-label">Industry Sectors</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Section Title -->
+							<div class="section-title-modern">
+							<h2>Regional & International Law Firm Affiliations</h2>
+							<div class="title-separator"></div>
+						</div>
+
+						<!-- Law Firm Affiliations -->
+						<div class="affiliations-section" style="margin-bottom: 50px;">
+							<div class="row clearfix">
+								
+								<!-- Affiliation Card: Aina Blankson -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="affiliation-card" style="background: #ffffff; border-radius: 10px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); border-left: 5px solid #d5aa6d; min-height: 250px;">
+										<div class="icon-box" style="text-align: center; margin-bottom: 20px;">
+											<span class="icon fa-solid fa-handshake" style="font-size: 48px; color: #d5aa6d;"></span>
+										</div>
+										<h4 style="font-size: 22px; font-weight: 700; color: #263438; margin-bottom: 15px; text-align: center;">Aina Blankson Africa Attorneys</h4>
+										<div class="location" style="text-align: center; color: #d5aa6d; font-weight: 600; margin-bottom: 15px;">
+											<i class="fa-solid fa-location-dot"></i> Nigeria
+										</div>
+										<p style="font-size: 15px; line-height: 1.7; color: #666; text-align: justify;">
+											A Nigeria-based firm that provides legal services to its clients across Africa. We have a long-standing Collaboration Agreement that enables us to serve clients throughout the continent with seamless cross-border legal support.
+										</p>
+									</div>
+								</div>
+
+								<!-- Affiliation Card: Great Styx -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="affiliation-card" style="background: #ffffff; border-radius: 10px; padding: 30px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); border-left: 5px solid #d5aa6d; min-height: 250px;">
+										<div class="icon-box" style="text-align: center; margin-bottom: 20px;">
+											<span class="icon fa-solid fa-briefcase" style="font-size: 48px; color: #d5aa6d;"></span>
+										</div>
+										<h4 style="font-size: 22px; font-weight: 700; color: #263438; margin-bottom: 15px; text-align: center;">Great Styx Attorneys</h4>
+										<div class="location" style="text-align: center; color: #d5aa6d; font-weight: 600; margin-bottom: 15px;">
+											<i class="fa-solid fa-location-dot"></i> Dar es Salaam, Tanzania
+										</div>
+										<p style="font-size: 15px; line-height: 1.7; color: #666; text-align: justify;">
+											A Dar es Salaam-based firm that specializes in dispute resolution and commercial transactions. We have a long-standing regional Collaboration Agreement that strengthens our capacity to handle East African matters.
+										</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- Section Title -->
+						<div class="section-title-modern">
+							<h2>Affiliated Non-Profits & CSR Initiatives</h2>
+							<div class="title-separator"></div>
+						</div>
+
+						<!-- Non-Profit Affiliations -->
+						<div class="nonprofit-section" style="margin-bottom: 50px;">
+							
+							<!-- Green Olive Foundation -->
+							<div class="nonprofit-card" style="background: #f8f9fa; border-radius: 10px; padding: 35px; margin-bottom: 30px; border: 2px solid #e0e0e0; transition: all 0.3s ease;">
+								<div class="row clearfix align-items-center">
+									<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+										<div class="nonprofit-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #d5aa6d 0%, #c99a5d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+											<span class="icon fa-solid fa-graduation-cap" style="font-size: 36px; color: #fff;"></span>
+										</div>
+									</div>
+									<div class="col-lg-10 col-md-9 col-sm-12">
+										<h4 style="font-size: 24px; font-weight: 700; color: #263438; margin-bottom: 15px;">Green Olive Foundation</h4>
+										<p style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 10px; text-align: justify;">
+											A non-profit dedicated to providing education support to bright but disadvantaged students. This foundation has educated hundreds of Kenyan students at primary, secondary and university level.
+										</p>
+										<div class="leadership-note" style="background: #fff; padding: 15px; border-radius: 5px; border-left: 3px solid #d5aa6d; margin-top: 15px;">
+											<p style="font-size: 14px; color: #666; margin: 0;">
+												<strong style="color: #263438;">Our Role:</strong> The Managing Partner <strong>Bemih Kanyonge</strong> serves as the Secretary to the Foundation.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Centre for Sports Law -->
+							<div class="nonprofit-card" style="background: #f8f9fa; border-radius: 10px; padding: 35px; margin-bottom: 30px; border: 2px solid #e0e0e0; transition: all 0.3s ease;">
+								<div class="row clearfix align-items-center">
+									<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+										<div class="nonprofit-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #d5aa6d 0%, #c99a5d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+											<span class="icon fa-solid fa-trophy" style="font-size: 36px; color: #fff;"></span>
+										</div>
+									</div>
+									<div class="col-lg-10 col-md-9 col-sm-12">
+										<h4 style="font-size: 24px; font-weight: 700; color: #263438; margin-bottom: 15px;">Centre for Sports Law (CSL)</h4>
+										<p style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 10px; text-align: justify;">
+											CSL is a non-profit organization established to promote and protect the rights of athletes, sports persons and sports entities by providing a wide range of legal services to athletes, sports personalities and sports entities that include sports clubs, sports associations and federations.
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- DAPMK -->
+							<div class="nonprofit-card" style="background: #f8f9fa; border-radius: 10px; padding: 35px; margin-bottom: 30px; border: 2px solid #e0e0e0; transition: all 0.3s ease;">
+								<div class="row clearfix align-items-center">
+									<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+										<div class="nonprofit-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #d5aa6d 0%, #c99a5d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+											<span class="icon fa-solid fa-heart-pulse" style="font-size: 36px; color: #fff;"></span>
+										</div>
+									</div>
+									<div class="col-lg-10 col-md-9 col-sm-12">
+										<h4 style="font-size: 24px; font-weight: 700; color: #263438; margin-bottom: 15px;">Diabetes Advocacy Promotion Management Kenya (DAPMK)</h4>
+										<p style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 10px; text-align: justify;">
+											DAPMK is a Non-Governmental Organization (NGO), an advocacy organization established to create awareness and to educate on the prevention and management of Diabetes.
+										</p>
+										<div class="leadership-note" style="background: #fff; padding: 15px; border-radius: 5px; border-left: 3px solid #d5aa6d; margin-top: 15px;">
+											<p style="font-size: 14px; color: #666; margin: 0;">
+												<strong style="color: #263438;">Our Role:</strong> The Managing Partner <strong>Bemih Kanyonge</strong> is a Board Member and Legal Adviser to the Organization.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Kituo Cha Sheria -->
+							<div class="nonprofit-card" style="background: #f8f9fa; border-radius: 10px; padding: 35px; margin-bottom: 30px; border: 2px solid #e0e0e0; transition: all 0.3s ease;">
+								<div class="row clearfix align-items-center">
+									<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+										<div class="nonprofit-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #d5aa6d 0%, #c99a5d 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+											<span class="icon fa-solid fa-scale-balanced" style="font-size: 36px; color: #fff;"></span>
+										</div>
+									</div>
+									<div class="col-lg-10 col-md-9 col-sm-12">
+										<h4 style="font-size: 24px; font-weight: 700; color: #263438; margin-bottom: 15px;">Kituo Cha Sheria</h4>
+										<p style="font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 10px; text-align: justify;">
+											Our lawyers also do pro bono work in association with Kituo Cha Sheria - the oldest Human Rights Organization in Kenya, demonstrating our commitment to access to justice for all.
+										</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- Section Title -->
+						<div class="section-title-modern">
+							<h2>Professional Compliance & Standards</h2>
+							<div class="title-separator"></div>
+						</div>
+
+						<!-- Compliance Section -->
+						<div class="compliance-section" style="margin-bottom: 50px;">
+							<div class="row clearfix">
+								
+								<!-- Professional Indemnity -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="compliance-card" style="background: linear-gradient(135deg, #263438 0%, #324248 100%); border-radius: 10px; padding: 35px; margin-bottom: 30px; text-align: center; min-height: 250px; display: flex; flex-direction: column; justify-content: center;">
+										<div class="icon-box" style="margin-bottom: 20px;">
+											<span class="icon fa-solid fa-shield-halved" style="font-size: 56px; color: #d5aa6d;"></span>
+										</div>
+										<h4 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">Professional Indemnity</h4>
+										<div class="year-badge" style="background: #d5aa6d; color: #fff; padding: 8px 20px; border-radius: 25px; display: inline-block; margin-bottom: 15px; font-weight: 600;">2025-2026</div>
+										<p style="font-size: 15px; line-height: 1.7; color: #e0e0e0;">
+											The firm has professional indemnity with a liability limit capable of meeting our clients' needs.
+										</p>
+									</div>
+								</div>
+
+								<!-- Tax Compliance -->
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="compliance-card" style="background: linear-gradient(135deg, #d5aa6d 0%, #c99a5d 100%); border-radius: 10px; padding: 35px; margin-bottom: 30px; text-align: center; min-height: 250px; display: flex; flex-direction: column; justify-content: center;">
+										<div class="icon-box" style="margin-bottom: 20px;">
+											<span class="icon fa-solid fa-certificate" style="font-size: 56px; color: #ffffff;"></span>
+										</div>
+										<h4 style="font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 15px;">Tax Compliance Certificate</h4>
+										<div class="year-badge" style="background: rgba(255, 255, 255, 0.3); color: #fff; padding: 8px 20px; border-radius: 25px; display: inline-block; margin-bottom: 15px; font-weight: 600;">Valid for 2025</div>
+										<p style="font-size: 15px; line-height: 1.7; color: #ffffff;">
+											The firm maintains full tax compliance with a valid Tax Compliance Certificate, ensuring transparency and regulatory adherence.
+										</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						</div>
+					</div>
+				</div>
+				
+				<!-- Sidebar Side -->
+                <div class="sidebar-side col-lg-3 col-md-12 col-sm-12">
+                	<aside class="sidebar sticky-top">
+						
+						<!-- Categories Widget -->
+						<div class="sidebar-widget categories-widget">
+							<div class="widget-content">
+								<div class="sidebar-title">
+									<h3>Our Services</h3>
+								</div>
+								<ul class="service-cat">
+								<li class="active"><a href="practice-areas.html#constitutional-litigation">Public Interest & Constitutional Litigation</a></li>
+								<li><a href="practice-areas.html#real-estate-environmental">Real Estate Planning & Environmental Law</a></li>
+								<li><a href="practice-areas.html#employment-labour">Employment & Labour Relations</a></li>
+								<li><a href="practice-areas.html#intellectual-property">Intellectual Property</a></li>
+								<li><a href="practice-areas.html#corporate-commercial">Corporate & Commercial Law</a></li>
+								<li><a href="practice-areas.html#private-client-succession">Private Client & Succession</a></li>
+								</ul>
+							</div>
+						</div>
+						
+						<!-- Reservations Widget -->
+						<div class="sidebar-widget reservation-widget">
+							<div class="widget-content">
+								<div class="sidebar-title">
+									<h3>Reservations</h3>
+								</div>
+								
+								<!-- Reservation Form -->
+								<div class="reservation-form">
+									<!-- Reservation Form -->
+									<form method="post" action="contact.html">
+										
+										<div class="form-group">
+											<input type="text" name="name" placeholder="Your Name" required>
+										</div>
+										
+										<div class="form-group">
+											<input type="email" name="email" placeholder="Email Address" required>
+										</div>
+										
+										<div class="form-group">
+											<input type="text" name="phone" placeholder="Phone Number" required>
+										</div>
+										
+										<div class="form-group">
+											<span class="icon icofont-calendar"></span>
+											<input class="datepicker" type="text" name="appointment" placeholder="Appointment Date" required>
+										</div>
+										
+										<div class="form-group">
+											<textarea name="message" placeholder="Here goes your message"></textarea>
+										</div>
+
+										<div class="form-group">
+											<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">send message</span></button>
+										</div>
+											
+									</form>
+
+								</div>
+								<!-- End consulation Form -->
+								
+							</div>
+						</div>
+						
+					</aside>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!-- CTA Section -->
+    <section class="cta-section style-two" style="background-image: url(public/background/1.jpg)">
+		<div class="auto-container">
+			<div class="clearfix">
+				<div class="pull-left">
+					<div class="title">No Obligation. Free consulation</div>
+					<a class="phone" href="tel:+0014-323-68-48">(+254) 758 409 619</a>
+				</div>
+				<div class="pull-right">
+					<a href="contact.html" class="theme-btn btn-style-two"><span class="txt">Contact Us</span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End CTA Section -->
+	
+	<!-- Main Footer -->
+    <footer class="main-footer">
+		<div class="auto-container">
+
+			<ul class="footer-nav">
+				<li><a href="about.html">Company</a></li>
+				<li><a href="about.html">Services</a></li>
+				<li><a href="about.html">Contact</a></li>
+				<li><a href="about.html">Reviews & Media</a></li>
+			</ul>
+			<div class="copyright">&copy; 2025 Kiskan Law Africa. All Rights Reserved.</div>
+			<div class="copyright" style="font-size: 0.85em; margin-top: 5px;">Powered by <a href="https://techcrast.co.ke/" target="_blank" style="color: inherit; text-decoration: underline;">Techcrast</a></div>
+		</div>
+	</footer>
+	<!-- End Main Footer -->
+	
+</div>
+<!--End pagewrapper-->
+
+<!-- Scroll To Top -->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-up"></span></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/tilt.jquery.min.js"></script>
+<script src="js/jquery.paroller.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/script.js"></script>
+<script src="js/sticky-header.js"></script>
+
+</body>
+</html>

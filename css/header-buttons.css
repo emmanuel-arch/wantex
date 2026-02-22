@@ -1,0 +1,254 @@
+.header-top {
+    position: relative;
+    padding: 12px 0;
+    background-color: #243033;
+}
+
+.header-top .inner-container {
+    position: relative;
+}
+
+.header-top .inner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Left side styles */
+.header-top .top-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .top-left .text {
+    color: #ccc;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-top .top-left .text i {
+    color: #bc9e74;
+    font-size: 14px;
+}
+
+/* Right side styles */
+.header-top .top-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-top .info-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+}
+
+.header-top .info-list li {
+    margin: 0;
+    padding: 0;
+}
+
+.header-top .info-list li:before {
+    display: none;
+}
+
+/* Animated Book Appointment Button */
+.header-top .info-list .header-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 15px;
+    font-size: 13px;
+    color: #fff;
+    background: rgba(188, 158, 116, 0.15);
+    border: 1px solid #bc9e74;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Attention-grabbing animations */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(188, 158, 116, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(188, 158, 116, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(188, 158, 116, 0);
+    }
+}
+
+@keyframes borderGlow {
+    0%, 100% {
+        border-color: #bc9e74;
+    }
+    50% {
+        border-color: #d4bc98;
+    }
+}
+
+.header-top .info-list .header-btn {
+    animation: 
+        glowPulse 3s infinite,
+        borderGlow 3s infinite;
+}
+
+.header-top .info-list .header-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+/* Shine effect every 3 seconds */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.header-top .info-list .header-btn:before {
+    animation: shine 3s infinite;
+}
+
+.header-top .info-list .header-btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.header-top .info-list .header-btn i {
+    position: relative;
+    z-index: 2;
+    margin-right: 6px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.header-top .info-list .header-btn:hover {
+    background: rgba(188, 158, 116, 0.3);
+    transform: translateY(-1px);
+}
+
+.header-top .info-list .header-btn:hover i {
+    transform: scale(1.1);
+}
+
+/* Phone button styles */
+.header-top .info-list .phone-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.header-top .info-list .phone-btn:hover {
+    color: #bc9e74;
+}
+
+.header-top .info-list .phone-btn i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.header-top .info-list .phone-btn:hover i {
+    transform: rotate(15deg);
+}
+
+.header-top .info-list .header-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 12px;
+    font-size: 13px;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(188, 158, 116, 0.3);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.header-top .info-list .header-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #bc9e74;
+    transition: width 0.3s ease;
+    z-index: 0;
+}
+
+.header-top .info-list .header-btn:hover {
+    border-color: #bc9e74;
+    color: #243033;
+}
+
+.header-top .info-list .header-btn:hover:before {
+    width: 100%;
+}
+
+.header-top .info-list .header-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.header-top .info-list .header-btn i {
+    position: relative;
+    z-index: 1;
+    margin-right: 6px;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.header-top .info-list .header-btn:hover i {
+    transform: translateX(2px);
+}
+
+.header-top .info-list .phone-btn {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.header-top .info-list .phone-btn:hover {
+    color: #bc9e74;
+}
+
+/* Ripple effect */
+.header-top .info-list .header-btn .ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}

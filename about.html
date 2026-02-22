@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Wantex Insurance</title>
+    <meta name="description" content="Learn about Wantex Insurance Agency - your trusted insurance partner in Kenya providing comprehensive coverage for Motor, Health, Property and Business." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/header-buttons.css" rel="stylesheet">
+    <link href="css/sticky-header.css" rel="stylesheet">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About Us - Wantex Insurance" />
+    <meta property="og:site_name" content="Wantex Insurance" />
+    <meta property="og:description" content="Learn about Wantex Insurance Agency - your trusted insurance partner in Kenya." />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Linearicons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- Add site Favicon -->
+    <link rel="shortcut icon" href="public/favicon.png" type="image/x-icon">
+    <link rel="icon" href="public/favicon.png" type="image/x-icon">
+    <meta name="msapplication-TileImage" content="public/favicon.png" />
+
+    <style>
+        /* ========== NEW COLOR SCHEME - RED & WHITE ========== */
+        :root {
+            --primary-red: #B91C1C;
+            --primary-dark-red: #991B1B;
+            --primary-light-red: #DC2626;
+            --accent-red: #EF4444;
+            --dark-bg: #1F2937;
+            --darker-bg: #111827;
+            --light-bg: #F9FAFB;
+            --white: #FFFFFF;
+            --text-dark: #1F2937;
+            --text-gray: #6B7280;
+            --text-light: #9CA3AF;
+            --header-bg: #E8E8E8;
+            --header-bg-light: #F0F0F0;
+        }
+
+        /* Header Styles - Light Grey Theme */
+        .main-header .header-top {
+            background: linear-gradient(135deg, #E0E0E0 0%, #E8E8E8 50%, #ECECEC 100%) !important;
+            border-bottom: 1px solid #D0D0D0;
+        }
+        .main-header .header-top .top-left .text { color: #333 !important; }
+        .main-header .header-top .top-right .social-box a { color: #333 !important; }
+        .main-header .header-top .top-right .social-box a:hover { color: var(--primary-red) !important; }
+
+        .main-header .header-upper {
+            background: linear-gradient(180deg, #ECECEC 0%, #E5E5E5 50%, #E0E0E0 100%) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-header .header-upper .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+        }
+        .main-header .header-upper .logo-box {
+            position: relative !important;
+            left: auto !important;
+            transform: none !important;
+            padding: 10px 30px !important;
+            background: none !important;
+        }
+        .main-header .header-upper .logo-box .logo img {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .main-header .left-menu,
+        .main-header .right-menu { flex: 1; }
+
+        .main-header .left-menu .navigation {
+            display: flex !important;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0; padding: 0; list-style: none;
+        }
+        .main-header .right-menu .navigation {
+            display: flex !important;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0; padding: 0; list-style: none;
+        }
+        .main-header .navigation > li {
+            position: relative;
+            display: inline-block;
+            margin: 0 15px;
+            white-space: nowrap;
+        }
+        .main-header .navigation > li > a {
+            position: relative;
+            display: block;
+            color: #1F2937;
+            text-align: center;
+            line-height: 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 25px 0;
+            font-size: 14px;
+            transition: all 300ms ease;
+        }
+        .main-header .navigation > li:hover > a,
+        .main-header .navigation > li.current > a {
+            color: var(--primary-red);
+        }
+
+        /* Dropdown Menus */
+        .main-header .navigation > li > ul {
+            position: absolute; left: 0; top: 100%;
+            width: 280px; z-index: 100;
+            display: none; opacity: 0; visibility: hidden;
+            padding: 15px; border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            transition: all 300ms ease;
+        }
+        .main-header .navigation > li:hover > ul {
+            display: block; opacity: 1; visibility: visible;
+        }
+        .main-header .navigation > li > ul > li { display: block; width: 100%; }
+        .main-header .navigation > li > ul > li > a {
+            display: block; padding: 8px 15px; color: #333;
+            font-size: 14px; font-weight: 500;
+            transition: all 300ms ease; border-radius: 5px;
+        }
+        .main-header .navigation > li > ul > li > a:hover {
+            background: #FEE2E2; color: var(--primary-red); padding-left: 20px;
+        }
+
+        /* Social Box */
+        .main-header .header-upper .social-box {
+            position: relative !important; left: auto !important; top: auto !important;
+            margin: 0; flex-shrink: 0;
+        }
+        .main-header .header-upper .social-box li { display: inline-block; margin-right: 10px; }
+        .main-header .header-upper .social-box li a { color: #333; font-size: 20px; transition: all 300ms ease; }
+        .main-header .header-upper .social-box li a:hover { color: var(--primary-red); }
+
+        /* Get Quote Button */
+        .main-header .header-upper .outer-box {
+            position: relative !important; right: auto !important; top: auto !important; flex-shrink: 0;
+        }
+        .main-header .outer-box .theme-btn {
+            background: var(--primary-red) !important; color: #fff !important;
+            border: none !important; box-shadow: 0 4px 15px rgba(185, 28, 28, 0.3);
+        }
+        .main-header .outer-box .theme-btn:hover { background: var(--primary-dark-red) !important; }
+
+        .main-header .header-inner .mobile-nav-toggler {
+            display: none !important; color: #333; font-size: 24px; cursor: pointer;
+        }
+
+        .theme-btn.btn-style-one {
+            background: var(--primary-red) !important; border-color: var(--primary-red) !important;
+        }
+        .theme-btn.btn-style-one:hover {
+            background: var(--primary-dark-red) !important; border-color: var(--primary-dark-red) !important;
+        }
+        .theme-btn.btn-style-one .txt { color: #fff !important; }
+
+        /* Responsive Header */
+        @media (max-width: 1200px) {
+            .main-header .navigation > li { margin: 0 10px; }
+            .main-header .navigation > li > a { font-size: 13px; }
+            .main-header .header-upper .logo-box { padding: 10px 20px !important; }
+        }
+        @media (max-width: 991px) {
+            .main-header .header-upper .header-inner { flex-wrap: wrap; justify-content: center; }
+            .main-header .left-menu, .main-header .right-menu { display: none !important; }
+            .main-header .header-inner .mobile-nav-toggler {
+                display: block !important; position: absolute; right: 15px; top: 50%; transform: translateY(-50%);
+            }
+            .main-header .header-upper .social-box {
+                position: absolute !important; left: 15px; top: 50%; transform: translateY(-50%);
+            }
+            .main-header .header-upper .outer-box { display: none !important; }
+            .main-header .header-upper .logo-box { padding: 15px !important; }
+        }
+
+        /* ========== PAGE BANNER ========== */
+        .page-banner {
+            background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        .page-banner h1 {
+            font-size: 48px; font-weight: 700; color: #fff;
+            font-family: 'EB Garamond', serif; margin-bottom: 15px;
+        }
+        .page-banner p {
+            font-size: 18px; color: rgba(255,255,255,0.8);
+            max-width: 600px; margin: 0 auto;
+        }
+
+        /* ========== ABOUT INTRO ========== */
+        .about-intro { padding: 80px 0; }
+        .about-intro .intro-box {
+            background: #fff; padding: 50px; border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border-left: 5px solid var(--primary-red);
+        }
+        .about-intro .intro-box h2 {
+            font-size: 36px; font-weight: 700; color: #1a1a1a;
+            font-family: 'EB Garamond', serif; margin-bottom: 25px;
+        }
+        .about-intro .intro-box p {
+            font-size: 17px; line-height: 1.9; color: #555;
+            margin-bottom: 20px; text-align: justify;
+        }
+
+        /* ========== MISSION VISION VALUES ========== */
+        .mvv-section { padding: 80px 0; background: #f8f9fa; }
+        .mvv-card {
+            background: #fff; border-radius: 15px; padding: 40px 30px;
+            text-align: center; box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease; height: 100%;
+            border-top: 4px solid var(--primary-red);
+        }
+        .mvv-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(185,28,28,0.15);
+        }
+        .mvv-card .icon-wrap {
+            width: 80px; height: 80px;
+            background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 25px;
+        }
+        .mvv-card .icon-wrap i { font-size: 32px; color: #fff; }
+        .mvv-card h4 {
+            font-size: 22px; font-weight: 700; color: #1a1a1a; margin-bottom: 15px;
+            font-family: 'EB Garamond', serif;
+        }
+        .mvv-card p { font-size: 15px; color: #666; line-height: 1.8; }
+
+        /* ========== STATS ========== */
+        .stats-section {
+            background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+            padding: 80px 0;
+        }
+        .stat-block { text-align: center; padding: 20px; }
+        .stat-block .number {
+            font-size: 52px; font-weight: 700; color: #EF4444;
+            font-family: 'EB Garamond', serif; line-height: 1;
+            margin-bottom: 10px;
+        }
+        .stat-block .label {
+            font-size: 16px; color: rgba(255,255,255,0.8);
+            text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        /* ========== SERVICES OVERVIEW ========== */
+        .services-overview { padding: 80px 0; }
+        .services-overview .section-header {
+            text-align: center; margin-bottom: 50px;
+        }
+        .services-overview .section-header .title {
+            color: var(--primary-red); font-size: 14px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;
+        }
+        .services-overview .section-header h2 {
+            font-size: 42px; font-weight: 700; color: #1a1a1a;
+            font-family: 'EB Garamond', serif;
+        }
+        .service-overview-card {
+            background: #fff; border-radius: 15px; padding: 35px 25px;
+            text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease; height: 100%;
+            border-bottom: 3px solid transparent;
+        }
+        .service-overview-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-bottom-color: var(--primary-red);
+        }
+        .service-overview-card .icon-wrap {
+            width: 70px; height: 70px;
+            background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 20px;
+        }
+        .service-overview-card .icon-wrap i { font-size: 28px; color: #fff; }
+        .service-overview-card h5 {
+            font-size: 18px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px;
+        }
+        .service-overview-card p { font-size: 14px; color: #666; line-height: 1.7; margin-bottom: 15px; }
+        .service-overview-card a {
+            color: var(--primary-red); text-decoration: none; font-weight: 600; font-size: 14px;
+        }
+        .service-overview-card a:hover { text-decoration: underline; }
+
+        /* ========== WHY CHOOSE US ========== */
+        .why-choose-section { padding: 80px 0; background: #f8f9fa; }
+        .why-choose-card {
+            display: flex; align-items: flex-start; gap: 20px;
+            padding: 25px; background: #fff; border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease; height: 100%;
+        }
+        .why-choose-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .why-choose-card .icon-wrap {
+            min-width: 55px; height: 55px;
+            background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+        }
+        .why-choose-card .icon-wrap i { font-size: 22px; color: #fff; }
+        .why-choose-card h5 {
+            font-size: 17px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;
+        }
+        .why-choose-card p { font-size: 14px; color: #666; line-height: 1.6; margin: 0; }
+
+        /* ========== FAQ ========== */
+        .faq-section-custom { padding: 80px 0; }
+        .faq-section-custom .section-header {
+            text-align: center; margin-bottom: 50px;
+        }
+        .faq-section-custom .section-header .title {
+            color: var(--primary-red); font-size: 14px; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;
+        }
+        .faq-section-custom .section-header h2 {
+            font-size: 42px; font-weight: 700; color: #1a1a1a;
+            font-family: 'EB Garamond', serif;
+        }
+        .faq-item {
+            background: #fff; border-radius: 12px; margin-bottom: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05); overflow: hidden;
+        }
+        .faq-item .faq-question {
+            padding: 20px 25px; cursor: pointer; display: flex;
+            align-items: center; justify-content: space-between;
+            font-size: 16px; font-weight: 600; color: #1a1a1a;
+            transition: all 0.3s ease;
+        }
+        .faq-item .faq-question:hover { color: var(--primary-red); }
+        .faq-item .faq-question i { transition: transform 0.3s ease; color: var(--primary-red); }
+        .faq-item .faq-answer {
+            padding: 0 25px 20px; font-size: 15px; color: #666;
+            line-height: 1.8; display: none;
+        }
+        .faq-item.active .faq-question { color: var(--primary-red); }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { display: block; }
+
+        /* ========== FOOTER ========== */
+        .main-footer { background: var(--darker-bg) !important; }
+        .main-footer .footer-nav li a:hover { color: var(--accent-red) !important; }
+
+        /* ========== SCROLL TO TOP ========== */
+        .scroll-to-top { background: var(--primary-red) !important; }
+        .scroll-to-top:hover { background: var(--primary-dark-red) !important; }
+
+        @media (max-width: 576px) {
+            .page-banner h1 { font-size: 32px; }
+            .about-intro .intro-box { padding: 30px 20px; }
+            .stat-block .number { font-size: 38px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Main Header-->
+        <header class="main-header">
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="header-inner" style="display: flex; align-items: center; justify-content: space-between; position: relative;">
+
+                        <!-- Social Box - Far Left -->
+                        <ul class="social-box" style="position: relative; left: auto; top: auto; margin: 0; flex-shrink: 0;">
+                            <li><a href="http://www.linkedin.com/in/kiskan-law-africa-llp-advocates-52954a382"><span class="fa-brands fa-linkedin"></span></a></li>
+                        </ul>
+
+                        <!-- Left Navigation -->
+                        <nav class="left-menu" style="flex: 1;">
+                            <ul class="navigation left-nav" style="display: flex; align-items: center; justify-content: flex-end; margin: 0; padding: 0; list-style: none;">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="dropdown"><a href="insurance-services.html">Personal Insurance</a>
+                                    <ul>
+                                        <li><a href="insurance-services.html#motor">Motor Insurance</a></li>
+                                        <li><a href="insurance-services.html#health">Health Insurance</a></li>
+                                        <li><a href="insurance-services.html#travel">Travel Insurance</a></li>
+                                        <li><a href="insurance-services.html#accident">Personal Accident Cover</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="insurance-services.html#home">Property Insurance</a>
+                                    <ul>
+                                        <li><a href="insurance-services.html#home">Home & Property Insurance</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <!-- Center Logo -->
+                        <div class="logo-box" style="position: relative; left: auto; transform: none; padding: 10px 30px; flex-shrink: 0;">
+                            <div class="logo"><a href="index.html"><img src="public/logo.png" alt="Wantex Insurance" title="Wantex Insurance" style="max-height: 60px; transition: transform 0.3s ease;"></a></div>
+                            <div class="logo-two" style="display: none;"><a href="index.html"><img src="public/logo.png" alt="Wantex Insurance" title="Wantex Insurance" style="max-height: 60px; transition: transform 0.3s ease;"></a></div>
+                        </div>
+
+                        <!-- Right Navigation -->
+                        <nav class="right-menu" style="flex: 1;">
+                            <ul class="navigation right-nav" style="display: flex; align-items: center; justify-content: flex-start; margin: 0; padding: 0; list-style: none;">
+                                <li class="dropdown"><a href="insurance-services.html#fire">Business Insurance</a>
+                                    <ul>
+                                        <li><a href="insurance-services.html#fire">Fire Insurance</a></li>
+                                        <li><a href="insurance-services.html#theft">Theft & Burglary</a></li>
+                                        <li><a href="insurance-services.html#liability">Liability Insurance</a></li>
+                                        <li><a href="insurance-services.html#marine">Marine Insurance</a></li>
+                                        <li><a href="insurance-services.html#commercial">Other Commercial Covers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="current"><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+
+                        <!-- Get Quote Button - Far Right -->
+                        <div class="outer-box" style="position: relative; right: auto; top: auto; margin-left: 15px; flex-shrink: 0;">
+                            <a href="contact.html#quote-section" class="theme-btn btn-style-one" style="padding: 8px 15px; font-size: 14px; line-height: 1.4;">
+                                <span class="txt">Get a Quote</span>
+                            </a>
+                        </div>
+
+                        <!-- Mobile Navigation Toggler (hidden on desktop) -->
+                        <div class="mobile-nav-toggler" style="display: none;"><span class="icon fa-solid fa-bars"></span></div>
+
+                    </div>
+                    
+                    <!-- Hidden nav-outer for mobile menu script compatibility -->
+                    <div class="nav-outer" style="display: none;">
+                        <nav class="main-menu">
+                            <div class="navbar-collapse">
+                                <ul class="navigation clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="dropdown"><a href="insurance-services.html">Personal Insurance</a>
+                                        <ul>
+                                            <li><a href="insurance-services.html#motor">Motor Insurance</a></li>
+                                            <li><a href="insurance-services.html#health">Health Insurance</a></li>
+                                            <li><a href="insurance-services.html#travel">Travel Insurance</a></li>
+                                            <li><a href="insurance-services.html#accident">Personal Accident Cover</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="insurance-services.html#home">Property Insurance</a>
+                                        <ul>
+                                            <li><a href="insurance-services.html#home">Home & Property Insurance</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="insurance-services.html#fire">Business Insurance</a>
+                                        <ul>
+                                            <li><a href="insurance-services.html#fire">Fire Insurance</a></li>
+                                            <li><a href="insurance-services.html#theft">Theft & Burglary</a></li>
+                                            <li><a href="insurance-services.html#liability">Liability Insurance</a></li>
+                                            <li><a href="insurance-services.html#marine">Marine Insurance</a></li>
+                                            <li><a href="insurance-services.html#commercial">Other Commercial Covers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="current"><a href="about.html">About Us</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="contact.html#quote-section">Get a Quote</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon lnr lnr-cross"></span></div>
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="index.html"><img src="public/logo.png" alt="" title=""></a></div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                </nav>
+            </div>
+            <!-- End Mobile Menu -->
+
+        </header>
+        <!--End Main Header -->
+
+        <!-- Page Banner -->
+        <section class="page-banner">
+            <div class="auto-container">
+                <h1>About <span style="color: #EF4444;">Wantex Insurance</span></h1>
+                <p>Your trusted insurance partner, committed to protecting what matters most to you</p>
+            </div>
+        </section>
+
+        <!-- About Intro -->
+        <section class="about-intro">
+            <div class="auto-container">
+                <div class="intro-box">
+                    <h2>Who We Are</h2>
+                    <p>
+                        <strong style="color: #1a1a1a; font-size: 18px;">Wantex Insurance Agency</strong> is a leading insurance intermediary in Kenya, dedicated to providing comprehensive and affordable insurance solutions for individuals, families, and businesses. We bridge the gap between our clients and reputable insurance underwriters, ensuring you get the best coverage at the most competitive rates.
+                    </p>
+                    <p>
+                        Founded on the principles of trust, transparency, and exceptional customer service, Wantex Insurance has grown to become a preferred insurance partner for thousands of Kenyans. We understand that every client has unique needs, which is why we take a personalized approach to insurance — carefully assessing your risks and recommending tailored solutions that give you true peace of mind.
+                    </p>
+                    <p>
+                        Our team of experienced and licensed insurance professionals brings together decades of combined expertise across all classes of insurance. From motor and health to property, business, and marine insurance, we offer end-to-end support — from policy placement and premium negotiation to claims management and advisory services.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission, Vision, Values -->
+        <section class="mvv-section">
+            <div class="auto-container">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <p style="color: #B91C1C; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;">What Drives Us</p>
+                    <h2 style="font-size: 42px; font-weight: 700; color: #1a1a1a; font-family: 'EB Garamond', serif;">Our Mission, Vision & Values</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="mvv-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-bullseye"></i></div>
+                            <h4>Our Mission</h4>
+                            <p>To provide accessible, reliable, and comprehensive insurance solutions that protect our clients' assets, health, and livelihoods — while delivering exceptional service at every touchpoint.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="mvv-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-eye"></i></div>
+                            <h4>Our Vision</h4>
+                            <p>To be Kenya's most trusted and client-centric insurance agency, recognized for innovation, integrity, and our unwavering commitment to protecting what matters most to our clients.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="mvv-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-heart"></i></div>
+                            <h4>Our Values</h4>
+                            <p>Integrity in every transaction. Transparency in our processes. Client-first approach in everything we do. Innovation in finding the best coverage. Excellence in service delivery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6" style="margin-bottom: 30px;">
+                        <div class="stat-block">
+                            <div class="number">5,000+</div>
+                            <div class="label">Clients Served</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6" style="margin-bottom: 30px;">
+                        <div class="stat-block">
+                            <div class="number">15+</div>
+                            <div class="label">Insurer Partners</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6" style="margin-bottom: 30px;">
+                        <div class="stat-block">
+                            <div class="number">98%</div>
+                            <div class="label">Claims Approval</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6" style="margin-bottom: 30px;">
+                        <div class="stat-block">
+                            <div class="number">10+</div>
+                            <div class="label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="services-overview">
+            <div class="auto-container">
+                <div class="section-header">
+                    <div class="title">What We Offer</div>
+                    <h2>Our Insurance Services</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="service-overview-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-car"></i></div>
+                            <h5>Motor Insurance</h5>
+                            <p>Comprehensive and third-party cover for your vehicle, including accident, theft and fire protection.</p>
+                            <a href="insurance-services.html#motor">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="service-overview-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+                            <h5>Health Insurance</h5>
+                            <p>Individual, family, and corporate health plans with comprehensive inpatient and outpatient coverage.</p>
+                            <a href="insurance-services.html#health">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="service-overview-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-house-chimney"></i></div>
+                            <h5>Home & Property</h5>
+                            <p>Protect your home and belongings from fire, theft, natural disasters and other unforeseen risks.</p>
+                            <a href="insurance-services.html#home">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="service-overview-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-plane"></i></div>
+                            <h5>Travel Insurance</h5>
+                            <p>Travel worry-free with coverage for medical emergencies, trip cancellation and lost luggage.</p>
+                            <a href="insurance-services.html#travel">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="service-overview-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-building"></i></div>
+                            <h5>Business Insurance</h5>
+                            <p>Fire, theft, liability, and marine insurance to protect your business operations and assets.</p>
+                            <a href="insurance-services.html#fire">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 30px;">
+                        <div class="service-overview-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-user-shield"></i></div>
+                            <h5>Personal Accident</h5>
+                            <p>Financial protection against accidental death, disability, and medical expenses from accidents.</p>
+                            <a href="insurance-services.html#accident">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-section">
+            <div class="auto-container">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <p style="color: #B91C1C; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px;">Why Wantex</p>
+                    <h2 style="font-size: 42px; font-weight: 700; color: #1a1a1a; font-family: 'EB Garamond', serif;">Why Choose Wantex Insurance</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                        <div class="why-choose-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <h5>Comprehensive Coverage</h5>
+                                <p>We offer a wide range of insurance products covering personal, property, and commercial risks across all major categories.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                        <div class="why-choose-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-tags"></i></div>
+                            <div>
+                                <h5>Competitive Premiums</h5>
+                                <p>We partner with multiple underwriters to negotiate the best rates, ensuring you get maximum coverage at affordable prices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                        <div class="why-choose-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-headset"></i></div>
+                            <div>
+                                <h5>Dedicated Support</h5>
+                                <p>Our client-first approach means you get personalized attention and responsive support throughout your insurance journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                        <div class="why-choose-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-file-signature"></i></div>
+                            <div>
+                                <h5>Hassle-Free Claims</h5>
+                                <p>We manage the entire claims process on your behalf — from documentation to settlement — so you can focus on recovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                        <div class="why-choose-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-user-tie"></i></div>
+                            <div>
+                                <h5>Expert Advisors</h5>
+                                <p>Our licensed insurance professionals bring years of experience across all classes of insurance to provide sound, tailored advice.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12" style="margin-bottom: 20px;">
+                        <div class="why-choose-card">
+                            <div class="icon-wrap"><i class="fa-solid fa-handshake"></i></div>
+                            <div>
+                                <h5>Trusted Partnerships</h5>
+                                <p>We work with Kenya's top-rated insurance underwriters, giving you access to industry-leading products and financial security.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section-custom">
+            <div class="auto-container">
+                <div class="section-header">
+                    <div class="title">Common Questions</div>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <div class="faq-item active">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            What types of insurance does Wantex offer?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            We offer a comprehensive range of insurance products including Motor Insurance (comprehensive & third party), Health Insurance (individual, family & corporate), Home & Property Insurance, Travel Insurance, Personal Accident Cover, Fire Insurance, Theft & Burglary, Liability Insurance, Marine Insurance, and other specialized commercial covers.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            How do I get an insurance quote from Wantex?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Getting a quote is easy! You can fill out our online quote request form on the Contact page, call us directly at +254 700 000 000, email us at info@wantex.co.ke, or visit our office in Nairobi. Our team will assess your needs and provide you with competitive quotes from multiple underwriters within 24 hours.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            How does the claims process work?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            When you need to make a claim, simply contact us and we'll guide you through the entire process. We help with documentation, liaison with the insurance company, and follow up until settlement. Our dedicated claims team ensures a smooth and hassle-free experience, with most claims processed efficiently.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Which insurance companies does Wantex work with?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            We partner with over 15 of Kenya's top-rated insurance underwriters. This allows us to compare products and premiums across multiple providers, ensuring you get the best coverage at the most competitive price. All our partner companies are licensed by the Insurance Regulatory Authority (IRA) of Kenya.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Can I customize my insurance policy?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Absolutely! We believe that one size does not fit all when it comes to insurance. Our advisors work closely with you to understand your specific needs and risks, then tailor a policy that provides the right level of coverage. We can add riders, adjust limits, and bundle policies to give you optimal protection.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">
+                            Is Wantex Insurance a licensed agency?
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Yes, Wantex Insurance Agency is fully licensed and regulated by the Insurance Regulatory Authority (IRA) of Kenya. We operate in full compliance with the Insurance Act and all relevant regulations, ensuring your interests are always protected.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: linear-gradient(135deg, #B91C1C 0%, #991B1B 100%); padding: 60px 0;">
+            <div class="auto-container">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                    <div>
+                        <div style="color: #fff; font-size: 18px; margin-bottom: 5px;">Ready to Get Protected?</div>
+                        <a href="tel:+254700000000" style="color: #fff; font-size: 28px; font-weight: 700; text-decoration: none;">Call Us: +254 700 000 000</a>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <a href="contact.html#quote-section" style="display: inline-block; padding: 14px 35px; background: #fff; color: #B91C1C; text-decoration: none; border-radius: 8px; font-weight: 600; transition: all 0.3s ease;">Get a Free Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="main-footer" style="background: #1a1a1a; padding: 60px 0 30px;">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div style="margin-bottom: 30px;">
+                            <img src="public/logo.png" alt="Wantex Insurance" style="max-height: 50px; margin-bottom: 20px;">
+                            <p style="color: rgba(255,255,255,0.7); font-size: 15px; line-height: 1.8;">Your trusted insurance partner in Kenya. We provide comprehensive coverage solutions for individuals and businesses.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h4 style="color: #fff; font-size: 18px; margin-bottom: 20px;">Quick Links</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Home</a></li>
+                            <li style="margin-bottom: 10px;"><a href="about.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">About Us</a></li>
+                            <li style="margin-bottom: 10px;"><a href="insurance-services.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Services</a></li>
+                            <li style="margin-bottom: 10px;"><a href="contact.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 style="color: #fff; font-size: 18px; margin-bottom: 20px;">Insurance</h4>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 10px;"><a href="insurance-services.html#motor" style="color: rgba(255,255,255,0.7); text-decoration: none;">Motor Insurance</a></li>
+                            <li style="margin-bottom: 10px;"><a href="insurance-services.html#health" style="color: rgba(255,255,255,0.7); text-decoration: none;">Health Insurance</a></li>
+                            <li style="margin-bottom: 10px;"><a href="insurance-services.html#home" style="color: rgba(255,255,255,0.7); text-decoration: none;">Property Insurance</a></li>
+                            <li style="margin-bottom: 10px;"><a href="insurance-services.html#fire" style="color: rgba(255,255,255,0.7); text-decoration: none;">Business Insurance</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h4 style="color: #fff; font-size: 18px; margin-bottom: 20px;">Contact Us</h4>
+                        <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.7);">
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-phone" style="color: #EF4444; margin-right: 10px;"></i> +254 700 000 000</li>
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-envelope" style="color: #EF4444; margin-right: 10px;"></i> info@wantex.co.ke</li>
+                            <li style="margin-bottom: 10px;"><i class="fa-solid fa-location-dot" style="color: #EF4444; margin-right: 10px;"></i> Nairobi, Kenya</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid rgba(255,255,255,0.1); margin-top: 40px; padding-top: 20px; text-align: center;">
+                    <p style="color: rgba(255,255,255,0.5); font-size: 14px; margin: 0;">&copy; 2026 Wantex Insurance. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!--End pagewrapper-->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa-solid fa-circle-arrow-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/tilt.jquery.min.js"></script>
+    <script src="js/jquery.paroller.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/header-buttons.js"></script>
+    <script src="js/sticky-header.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/contact-form.js"></script>
+
+    <script>
+        // FAQ Toggle
+        function toggleFaq(element) {
+            var faqItem = element.parentElement;
+            var allItems = document.querySelectorAll('.faq-item');
+            
+            allItems.forEach(function(item) {
+                if (item !== faqItem) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            faqItem.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

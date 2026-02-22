@@ -1,0 +1,267 @@
+/* Team Section Styles */
+.team-section {
+    position: relative;
+    padding: 30px 0;
+    background: linear-gradient(to bottom, #294148 0%, #1a2a2f 100%);
+    height: 500px; /* Reduced height for smaller portrait frames */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.team-section .auto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.team-carousel {
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px 0;
+    margin: 0 -20px;
+}
+
+.team-block {
+    position: relative;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.team-block .inner-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    width: 400px; /* Width stays the same at 400px */
+    height: 500px; /* Height set to exactly 500px as requested */
+    margin: 0 auto;
+}
+
+
+.team-block .image {
+    position: relative;
+    overflow: hidden;
+    background: none;
+    width: 100%;
+    aspect-ratio: 4 / 5; /* keeps consistent portrait shape */
+    max-height: 500px; /* Set maximum height for portrait images */
+}
+
+.team-block .image img {
+    display: block;
+    width: 100%;
+    height: 430px; /* Increased height to allow more of the image to show */
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+}
+
+.team-block .inner-box:hover .image img {
+    transform: scale(1.05);
+}
+
+
+.team-block .lower-content {
+    position: relative;
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+    background: #fff;
+    /* Set a fixed height to ensure it doesn't take too much space */
+    height: auto;
+    max-height: 100px; /* Limit the height */
+}
+
+.team-block .lower-content h3 {
+    position: relative;
+    font-size: 18px; /* Slightly smaller font */
+    font-weight: 600;
+    margin-bottom: 2px; /* Reduced margin */
+    line-height: 1.2; /* Tighter line height */
+}
+
+.team-block .lower-content h3 a {
+    color: #294148;
+    transition: all 0.3s ease;
+}
+
+.team-block .lower-content h3 a:hover {
+    color: #bc9e74;
+}
+
+.team-block .lower-content .text {
+    color: #777;
+    font-size: 13px; /* Smaller font */
+    margin-bottom: 5px; /* Reduced margin */
+    line-height: 1.2; /* Tighter line height */
+}
+
+.team-block .social-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Reduced gap */
+    margin-top: 5px; /* Reduced margin */
+}
+
+.team-block .social-box li a {
+    color: #bc9e74;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.team-block .social-box li a:hover {
+    color: #294148;
+    transform: translateY(-3px);
+}
+
+/* Navigation Buttons */
+.team-carousel {
+    position: relative;
+    z-index: 1;
+}
+
+.team-carousel .swiper-button-next,
+.team-carousel .swiper-button-prev {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: -30px;
+    position: absolute;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer; /* Add pointer cursor to make it clear they're clickable */
+}
+
+.team-carousel .swiper-button-next {
+    right: -30px;
+}
+
+.team-carousel .swiper-button-prev {
+    left: -30px;
+}
+
+.team-carousel .swiper-button-next:after,
+.team-carousel .swiper-button-prev:after {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #294148;
+    transition: all 0.3s ease;
+}
+
+.team-carousel .swiper-button-next:after {
+    content: "\f054"; /* Font Awesome chevron-right */
+}
+
+.team-carousel .swiper-button-prev:after {
+    content: "\f053"; /* Font Awesome chevron-left */
+}
+
+.team-carousel .swiper-button-next:hover,
+.team-carousel .swiper-button-prev:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.team-carousel .swiper-button-next:hover:after,
+.team-carousel .swiper-button-prev:hover:after {
+    color: #bc9e74;
+    transform: scale(1.1);
+}
+
+/* Make buttons more noticeable and add active state */
+.team-carousel .swiper-button-next:active,
+.team-carousel .swiper-button-prev:active {
+    background: #bc9e74;
+    transform: scale(0.95);
+}
+
+.team-carousel .swiper-button-next:active:after,
+.team-carousel .swiper-button-prev:active:after {
+    color: #ffffff;
+}
+
+/* Add subtle pulse animation instead of float */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    50% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.team-carousel .swiper-button-next,
+.team-carousel .swiper-button-prev {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+    .team-carousel .swiper-button-next {
+        right: -20px;
+    }
+    
+    .team-carousel .swiper-button-prev {
+        left: -20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .team-carousel {
+        padding: 0 40px;
+    }
+    
+    .team-carousel .swiper-button-next {
+        right: 0;
+    }
+    
+    .team-carousel .swiper-button-prev {
+        left: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .team-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .team-section {
+        padding: 40px 0;
+    }
+    
+    .team-block {
+        margin: 0 10px;
+    }
+    
+    .team-block .lower-content {
+        padding: 15px;
+    }
+    
+    .team-carousel {
+        padding: 0 30px;
+    }
+    
+    .team-carousel .swiper-button-next,
+    .team-carousel .swiper-button-prev {
+        width: 45px;
+        height: 45px;
+        margin-top: -22.5px;
+    }
+    
+    .team-carousel .swiper-button-next:after,
+    .team-carousel .swiper-button-prev:after {
+        font-size: 18px;
+    }
+}

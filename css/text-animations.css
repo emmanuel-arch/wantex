@@ -1,0 +1,188 @@
+/* Dynamic Text Container */
+.dynamic-text-container {
+    min-height: 220px;
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-pair {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Ensure consistent gap between lines */
+}
+
+.text-pair h2 {
+    color: #ffffff;
+    font-size: 64px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.text-pair h2.typing-text {
+    margin-bottom: 0; /* Remove margin and rely on flex gap */
+}
+
+.text-pair h2.slide-text {
+    font-size: 56px;
+    background: linear-gradient(45deg, #f6d365 0%, #fda085 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(0); /* Reset initial transform */
+}
+
+/* Animation sequences for each pair - all using the same pattern */
+.pair-1 {
+    animation: showPair 15s infinite;
+}
+
+.pair-2 {
+    animation: showPair 15s infinite 5s;
+}
+
+.pair-3 {
+    animation: showPair 15s infinite 10s;
+}
+
+/* Typing text animation - consistent across all pairs */
+.text-pair .typing-text {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    overflow: hidden;
+    opacity: 1 !important;
+    width: 0;
+}
+
+.pair-1 .typing-text {
+    animation: typing 2s steps(40, end) forwards, 
+               cursor .75s step-end infinite;
+}
+
+.pair-1 .slide-text {
+    display: block;
+    animation: slideUpFade 1s forwards;
+    animation-delay: 2s;
+}
+
+/* Second pair animations - identical pattern to first pair */
+.pair-2 .typing-text {
+    animation: typing 2s steps(40, end) forwards, 
+               cursor .75s step-end infinite;
+}
+
+.pair-2 .slide-text {
+    display: block;
+    animation: slideUpFade 1s forwards;
+    animation-delay: 2s;
+}
+
+/* Third pair animations - identical pattern to first pair */
+.pair-3 .typing-text {
+    animation: typing 2s steps(40, end) forwards, 
+               cursor .75s step-end infinite;
+}
+
+.pair-3 .slide-text {
+    display: block;
+    animation: slideUpFade 1s forwards;
+    animation-delay: 2s;
+}
+
+.pair-3 .slide-text {
+    display: block;
+    animation: slideUpFade 1s forwards;
+    animation-delay: 2s;
+}
+
+/* Animation Keyframes */
+@keyframes showPair {
+    0%, 3% {
+        opacity: 0;
+        visibility: visible;
+    }
+    5%, 28% {
+        opacity: 1;
+        visibility: visible;
+    }
+    30%, 100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes cursor {
+    from, to { border-color: transparent }
+    50% { border-color: #fff }
+}
+
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fix for webkit gradient text */
+.slide-text {
+    background-clip: text;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .dynamic-text-container {
+        min-height: 150px;
+    }
+    
+    .text-pair {
+        gap: 20px;
+    }
+    
+    .text-pair h2 {
+        font-size: 36px;
+    }
+    
+    .text-pair h2.slide-text {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dynamic-text-container {
+        min-height: 120px;
+    }
+    
+    .text-pair {
+        gap: 15px;
+    }
+    
+    .text-pair h2 {
+        font-size: 28px;
+    }
+    
+    .text-pair h2.slide-text {
+        font-size: 24px;
+    }
+}

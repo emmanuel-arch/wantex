@@ -1,0 +1,292 @@
+.header-upper {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.main-header .header-upper.sticky-upper-header,
+.sticky-upper-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background: #ffffff;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.4s ease;
+}
+
+.header-placeholder {
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.sticky-upper-header .logo-box {
+    padding: 5px 15px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.sticky-upper-header .logo {
+    display: block !important;
+}
+
+.sticky-upper-header .logo img,
+.sticky-upper-header .logo-two img {
+    max-height: 50px !important;
+    width: auto !important;
+    transform: none !important;
+    transition: all 0.3s ease;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.sticky-upper-header .navigation > li > a {
+    padding: 20px 0 !important;
+    color: #1a1a1a !important;
+}
+
+.sticky-upper-header .navigation > li:hover > a,
+.sticky-upper-header .navigation > li.current > a {
+    color: #B91C1C !important;
+}
+
+.sticky-upper-header .social-box li a {
+    color: #1a1a1a;
+}
+
+.sticky-upper-header .social-box li a:hover {
+    color: #B91C1C;
+}
+
+.sticky-upper-header .outer-box {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    transform: none !important;
+    margin-left: 15px;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.sticky-upper-header .outer-box .theme-btn {
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+/* Ensure header-inner maintains flex alignment in sticky state */
+.sticky-upper-header .header-inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 70px;
+}
+
+/* Keep all nav elements vertically centered */
+.sticky-upper-header .left-menu,
+.sticky-upper-header .right-menu {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.sticky-upper-header .navigation {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* ===== Inner Page Header Styles (header-style-two) ===== */
+/* Initial state: transparent header over dark banner with white text */
+.header-style-two .header-upper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background: transparent;
+}
+
+.header-style-two .navigation > li > a {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.header-style-two .navigation > li:hover > a,
+.header-style-two .navigation > li.current > a {
+    color: #EF4444 !important;
+}
+
+.header-style-two .social-box li a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.header-style-two .social-box li a:hover {
+    color: #EF4444;
+}
+
+.header-style-two .logo img {
+    filter: brightness(0) invert(1);
+}
+
+/* Dropdown menu styling for inner pages */
+.header-style-two .navigation > li > ul {
+    background: rgba(31, 41, 55, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-style-two .navigation > li > ul > li > a {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.header-style-two .navigation > li > ul > li > a:hover {
+    color: #EF4444 !important;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Sticky state for inner pages - override to white background */
+.header-style-two .header-upper.sticky-upper-header {
+    position: fixed !important;
+    background: #ffffff !important;
+}
+
+.header-style-two .sticky-upper-header .navigation > li > a {
+    color: #1a1a1a !important;
+}
+
+.header-style-two .sticky-upper-header .navigation > li:hover > a,
+.header-style-two .sticky-upper-header .navigation > li.current > a {
+    color: #B91C1C !important;
+}
+
+.header-style-two .sticky-upper-header .social-box li a {
+    color: #1a1a1a;
+}
+
+.header-style-two .sticky-upper-header .logo img {
+    filter: none;
+}
+
+/* Dropdown menu in sticky state */
+.header-style-two .sticky-upper-header .navigation > li > ul {
+    background: #ffffff;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.header-style-two .sticky-upper-header .navigation > li > ul > li > a {
+    color: #1a1a1a !important;
+}
+
+.header-style-two .sticky-upper-header .navigation > li > ul > li > a:hover {
+    color: #B91C1C !important;
+    background: #f8f8f8;
+}
+
+.outer-box {
+    margin-left: 20px;
+}
+
+.nav-appointment-btn {
+    font-size: 14px;
+    padding: 10px 25px !important;
+    background: linear-gradient(45deg, #B91C1C, #EF4444);
+    border: none;
+    border-radius: 4px;
+    color: #fff !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    white-space: nowrap;
+    box-shadow: 0 2px 10px rgba(185, 28, 28, 0.3);
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.nav-appointment-btn {
+    background-size: 200% 200%;
+    animation: gradientMove 3s ease infinite;
+}
+
+.nav-appointment-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+        opacity: 0.5;
+    }
+    20% {
+        left: 100%;
+        opacity: 0.8;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+.nav-appointment-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(185, 28, 28, 0.4);
+}
+
+.sticky-upper-header .nav-appointment-btn {
+    color: #ffffff !important;
+    background: linear-gradient(45deg, #B91C1C, #EF4444);
+}
+
+/* Sticky header button styles */
+.sticky-upper-header .theme-btn.btn-style-one {
+    background: #B91C1C !important;
+    color: #fff !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+}
+
+.sticky-upper-header .theme-btn.btn-style-one .txt {
+    color: #fff !important;
+}
+
+.sticky-upper-header .theme-btn.btn-style-one:hover {
+    background: #991B1B !important;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

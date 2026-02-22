@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Test</title>
+    <script>
+        async function testBackend() {
+            try {
+                // Test auth endpoint first
+                const authResponse = await fetch('http://localhost/kiskanlaw/auth.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        action: 'login',
+                        username: 'admin',
+                        password: 'password'
+                    })
+                });
+                const authData = await authResponse.json();
+                document.getElementById('authResult').textContent = JSON.stringify(authData, null, 2);
+
+                if (authData.success && authData.token) {
+                    // Test news endpoint with token
+                    const newsResponse = await fetch('http://localhost/kiskanlaw/news.php', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json',
+                            'Authorization': 'Bearer ' + authData.token
+                        }
+                    });
+                    const newsData = await newsResponse.json();
+                    document.getElementById('newsResult').textContent = JSON.stringify(newsData, null, 2);
+                } else {
+                    throw new Error('Authentication failed');
+                }
+            } catch (error) {
+                document.getElementById('error').textContent = error.toString();
+                console.error('Error:', error);
+            }
+        }
+
+        // Add CORS test
+        async function testCORS() {
+            try {
+                const response = await fetch('http://localhost/kiskanlaw/news.php', {
+                    method: 'OPTIONS',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                document.getElementById('corsResult').textContent = 'CORS Test: ' + (response.ok ? 'Success' : 'Failed');
+            } catch (error) {
+                document.getElementById('corsResult').textContent = 'CORS Test: Failed - ' + error;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Frontend Test Page</h1>
+    <button onclick="testBackend()">Test Backend Connection</button>
+    
+    <h2>News Response:</h2>
+    <pre id="newsResult"></pre>
+
+    <h2>Auth Response:</h2>
+    <pre id="authResult"></pre>
+
+    <h2>Error:</h2>
+    <pre id="error"></pre>
+</body>
+</html>
