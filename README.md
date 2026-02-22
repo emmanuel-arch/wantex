@@ -1,16 +1,16 @@
-# ⚖️ Kiskan Law Africa LLP Advocates
+# 🛡️ Wantex Insurance Agency
 
 <div align="center">
 
-![Kiskan Law Africa](public/logo.png)
+![Wantex Insurance](public/logo.png)
 
-**A Professional Legal Services Website**
+**Your Trusted Insurance Partner in Kenya**
 
-[![Website](https://img.shields.io/badge/Website-Live-success)](https://kiskanlawafrica.co.ke)
+[![Website](https://img.shields.io/badge/Website-Live-success)](https://wantex.co.ke)
 [![License](https://img.shields.io/badge/License-Proprietary-blue)]()
 [![Powered By](https://img.shields.io/badge/Powered%20By-Techcrast-gold)](https://techcrast.co.ke/)
 
-*Excellence in Legal Representation | Integrity | Client-Centered Approach*
+*Comprehensive Coverage | Trusted Partners | Peace of Mind*
 
 </div>
 
@@ -21,7 +21,7 @@
 - [About](#about)
 - [Features](#features)
 - [Pages Overview](#pages-overview)
-- [Practice Areas](#practice-areas)
+- [Insurance Services](#insurance-services)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
@@ -31,42 +31,46 @@
 
 ---
 
-## 🏛️ About
+## 🏢 About
 
-**Kiskan Law Africa LLP Advocates** is a young, dynamic, energetic, and fast-paced law firm established through a merger between:
-- **Kisabit & Associates** (Est. 2012)
-- **Mburugu & Kanyonge Associates, Advocates** (Est. 2014)
+**Wantex Insurance Agency** is a leading insurance intermediary in Kenya, dedicated to providing comprehensive and affordable insurance solutions for individuals, families, and businesses. We bridge the gap between our clients and reputable insurance underwriters, ensuring you get the best coverage at the most competitive rates.
 
-The firm consists of brilliant and diverse legal practitioners, researchers, mediators, paralegals, and interns committed to providing exceptional legal services across East Africa.
+Founded on the principles of trust, transparency, and exceptional customer service, Wantex Insurance has grown to become a preferred insurance partner for thousands of Kenyans. We understand that every client has unique needs, which is why we take a personalized approach to insurance — carefully assessing your risks and recommending tailored solutions that give you true peace of mind.
 
 ### 🎯 Our Mission
-To provide excellent and valuable legal services to individuals, financial institutions, fintechs, companies, state corporations, benefit schemes, NGOs, associations, and groups across Kenya and the region.
+To provide excellent and valuable insurance solutions to individuals, families, financial institutions, companies, and businesses across Kenya, delivering comprehensive coverage at the most competitive rates.
+
+### 🔑 Why Choose Wantex
+- **Licensed & Regulated** — Fully licensed by the Insurance Regulatory Authority (IRA) of Kenya
+- **Multiple Underwriters** — We work with top insurance companies to get you the best deals
+- **Personalized Service** — Tailored insurance solutions based on your unique needs
+- **Claims Support** — Dedicated claims assistance to ensure smooth processing
+- **Competitive Rates** — Access to the most affordable premiums on the market
 
 ---
 
 ## ✨ Features
 
 ### 🎨 Design & User Experience
-- **Modern, Professional Design** - Clean and intuitive interface
-- **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
-- **Sticky Navigation** - Easy access to all sections while scrolling
-- **Smooth Animations** - Enhanced user experience with WOW.js animations
-- **Interactive Elements** - Hover effects, transitions, and dynamic content
+- **Modern, Professional Design** — Clean and intuitive red & white themed interface
+- **Fully Responsive** — Optimized for desktop, tablet, and mobile devices
+- **Sticky Navigation** — Easy access to all sections while scrolling
+- **Smooth Animations** — Enhanced user experience with WOW.js animations
+- **Interactive Elements** — Hover effects, transitions, and dynamic content
 
 ### 🔧 Functionality
-- **Practice Areas Navigation** - Direct anchor links to specific practice areas
-- **Contact Forms** - Multiple contact and appointment booking forms
-- **Client Portfolio** - Showcase of esteemed clients with detailed information
-- **Team Profiles** - Modal-based detailed team member information
-- **Blog Integration** - Latest legal insights and developments
-- **Social Media Integration** - Connected to LinkedIn and other platforms
+- **Insurance Services Navigation** — Browse all insurance products with detailed descriptions
+- **Quote Request Forms** — Easy-to-use forms for getting insurance quotes
+- **Coverage Comparison** — Clear breakdown of coverage options and benefits
+- **Contact & Support** — Multiple contact points for enquiries and claims
+- **Social Media Integration** — Connected across social platforms
 
 ### 📱 Technical Features
-- **SEO Optimized** - Meta tags, structured data, and semantic HTML
-- **Google Analytics Integration** - GTM implementation for tracking
-- **Performance Optimized** - Minified assets and lazy loading
-- **Cross-Browser Compatible** - Works on all modern browsers
-- **Accessibility Compliant** - WCAG guidelines followed
+- **SEO Optimized** — Meta tags, structured data, and semantic HTML
+- **Performance Optimized** — Minified assets and lazy loading
+- **Cross-Browser Compatible** — Works on all modern browsers
+- **Accessibility Compliant** — WCAG guidelines followed
+- **Serverless Contact Forms** — Vercel-powered email handling
 
 ---
 
@@ -76,112 +80,90 @@ To provide excellent and valuable legal services to individuals, financial insti
 
 | Page | Description | Key Features |
 |------|-------------|--------------|
-| **index.html** | Homepage | Hero section, practice areas overview, team showcase |
-| **about.html** | About The Firm | Firm history, mission, values, detailed information |
-| **practice-areas.html** | Practice Areas | Comprehensive details of all 6 practice areas |
-| **service.html** | People & Culture | Team members with detailed modal profiles |
-| **service-detail.html** | Portfolio | Client showcase and partnerships |
-| **partnerships.html** | Partnerships & CSR | Law firm affiliations, non-profit partnerships, compliance |
-| **contact.html** | Contact Us | Contact form, location map, office information |
-| **careers.html** | Careers | Job opportunities and application information |
-| **blog.html** | Blog/Insights | Legal insights and news articles |
-| **blog-detail.html** | Blog Details | Detailed blog post view |
+| **index.html** | Homepage | Hero slider, insurance products overview, coverage options |
+| **about.html** | About Us | Company story, mission, values, FAQ section |
+| **insurance-services.html** | Insurance Services | Detailed breakdown of all insurance products |
+| **contact.html** | Contact Us | Quote request form, location map, office information |
 
 ---
 
-## ⚖️ Practice Areas
+## 🛡️ Insurance Services
 
-The firm offers comprehensive legal services across six major practice areas:
+Wantex Insurance offers comprehensive coverage across six major insurance categories:
 
-### 1. 🏛️ Public Interest & Constitutional Litigation
-- Constitutional interpretation and enforcement
-- Human rights litigation and advocacy
-- Judicial review of administrative actions
-- Electoral and political rights disputes
-- Strategic litigation for policy reform
+### 1. 🚗 Motor Insurance
+- Comprehensive motor vehicle cover
+- Third-party only & third-party fire and theft
+- Fleet insurance for businesses
+- Personal and commercial vehicle cover
 
-### 2. 🏢 Real Estate Planning & Environmental Law
-- Property acquisition, sales, and lease agreements
-- Environmental impact assessments and audits
-- Land use planning and zoning compliance
-- Climate change legal frameworks
-- Natural resources management
+### 2. 🏥 Health Insurance
+- Individual and family medical cover
+- Inpatient and outpatient benefits
+- Dental and optical cover
+- Maternity benefits and wellness programs
 
-### 3. 💼 Employment & Labour Relations
-- Employment contracts and workplace policies
-- Disciplinary procedures and unfair dismissal
-- Collective bargaining and trade union negotiations
-- Occupational safety and health compliance
-- Employment tribunal representation
+### 3. 🏠 Home & Property Insurance
+- Homeowners and tenants cover
+- Fire and perils protection
+- Domestic contents insurance
+- Landlord insurance
 
-### 4. 💡 Intellectual Property
-- Trademark, copyright, and patent registration
-- IP portfolio management and audits
-- Technology transfer and licensing
-- IP enforcement and anti-counterfeiting
-- Digital content and software licensing
+### 4. 💼 Business Insurance
+- Commercial property insurance
+- Professional indemnity cover
+- Public and product liability
+- Business interruption insurance
 
-### 5. 🤝 Corporate & Commercial Law
-- Company formation and corporate governance
-- Mergers, acquisitions, and restructuring
-- Commercial contracts and agreements
-- Banking and finance transactions
-- Securities regulation and capital markets
+### 5. ✈️ Travel Insurance
+- Local and international travel cover
+- Medical emergency evacuation
+- Trip cancellation and delay protection
+- Lost baggage and personal effects cover
 
-### 6. 👤 Private Client & Succession
-- Will drafting and estate planning
-- Trust formation and administration
-- Succession planning for family businesses
-- Matrimonial property settlements
-- Cross-border succession matters
+### 6. 🤕 Personal Accident Cover
+- 24-hour accidental death and disability cover
+- Medical expenses from accidents
+- Temporary and permanent disability benefits
+- Group personal accident schemes
 
 ---
 
 ## 💻 Technology Stack
 
 ### Frontend
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript** - Interactive functionality
-- **Bootstrap 5** - Responsive framework
-- **jQuery** - DOM manipulation and AJAX
+- **HTML5** — Semantic markup
+- **CSS3** — Modern styling with Flexbox and Grid
+- **JavaScript** — Interactive functionality
+- **Bootstrap 5** — Responsive framework
+- **jQuery** — DOM manipulation and AJAX
 
 ### Libraries & Plugins
-- **Font Awesome 6.4.2** - Icon library
-- **WOW.js** - Scroll animations
-- **Swiper.js** - Touch sliders
-- **Fancybox** - Lightbox gallery
-- **jQuery UI** - Date picker and UI components
-- **Parallax.js** - Parallax scrolling effects
-- **Tilt.js** - 3D tilt hover effects
+- **Font Awesome 6.4.2** — Icon library
+- **WOW.js** — Scroll animations
+- **Swiper.js** — Touch sliders
+- **Fancybox** — Lightbox gallery
+- **jQuery UI** — Date picker and UI components
+- **Parallax.js** — Parallax scrolling effects
+- **Tilt.js** — 3D tilt hover effects
 
 ### Fonts
-- **DM Sans** - Body text
-- **EB Garamond** - Headings and elegant text
-
-### Analytics & Tracking
-- **Google Tag Manager (GTM-5JCTSSF)** - Analytics tracking
-- **Structured Data (JSON-LD)** - SEO enhancement
+- **DM Sans** — Body text
+- **EB Garamond** — Headings and elegant text
 
 ---
 
 ## 📁 Project Structure
 
 ```
-KISKAN LAW/
+WANTEX/
 │
 ├── 📄 index.html                    # Homepage
 ├── 📄 about.html                    # About page
-├── 📄 practice-areas.html           # Practice areas details
-├── 📄 service.html                  # People & Culture
-├── 📄 service-detail.html           # Portfolio/Clients
-├── 📄 partnerships.html             # Partnerships & CSR
+├── 📄 insurance-services.html       # Insurance services details
 ├── 📄 contact.html                  # Contact page
-├── 📄 careers.html                  # Careers page
-├── 📄 blog.html                     # Blog listing
-├── 📄 blog-detail.html              # Blog post detail
 ├── 📄 vercel.json                   # Vercel deployment config
-├── 📄 sendemail.php                 # Email handler
+├── 📄 sendemail.php                 # Email handler (legacy)
 │
 ├── 📁 api/
 │   └── send-email.js                # Serverless email function
@@ -194,7 +176,7 @@ KISKAN LAW/
 │   ├── banner.css                   # Banner styles
 │   ├── modern-hero.css              # Hero section styles
 │   ├── text-animations.css          # Text animation styles
-│   ├── team-section.css             # Team section styles
+│   ├── header-buttons.css           # Header button styles
 │   └── [other CSS files]
 │
 ├── 📁 js/
@@ -205,37 +187,18 @@ KISKAN LAW/
 │   ├── wow.js                       # Scroll animations
 │   ├── swiper.min.js                # Slider functionality
 │   ├── validate.js                  # Form validation
+│   ├── contact-form.js              # Contact form handling
 │   └── [other JS files]
 │
 ├── 📁 public/
-│   ├── logo.png                     # Company logo
-│   ├── favicon.png                  # Website favicon
-│   │
-│   ├── 📁 clients/                  # Client logos
-│   │   ├── ideon.jpg
-│   │   ├── cemes-insurance.jpg
-│   │   ├── amaco.jpg
-│   │   ├── rba.jpg
-│   │   ├── help.jpg
-│   │   └── [other client logos]
-│   │
-│   ├── 📁 resource/                 # Team member photos
-│   │   ├── 1.png
-│   │   ├── 2.png
-│   │   ├── 3.png
-│   │   └── [other resource images]
-│   │
-│   ├── 📁 main-slider/              # Hero images
-│   │   └── 1.png
-│   │
-│   ├── 📁 background/               # Background images
-│   │   └── 1.jpg
-│   │
 │   ├── 📁 images/                   # General images
-│   │   ├── headshots/
-│   │   └── hero/
-│   │
-│   └── 📁 icons/                    # Icon assets
+│   │   ├── headshots/               # Team photos
+│   │   ├── hero/                    # Hero section images
+│   │   └── slider/                  # Slider images
+│   ├── 📁 background/               # Background images
+│   ├── 📁 icons/                    # Icon assets
+│   ├── 📁 clients/                  # Partner logos
+│   └── 📁 form_submissions/         # Form submission records
 │
 └── 📁 fonts/
     └── 📁 Linearicons-Free-v1.0.0/  # Icon font files
@@ -247,14 +210,15 @@ KISKAN LAW/
 
 ### Prerequisites
 - Web server (Apache, Nginx, or similar)
-- PHP 7.4+ (for contact forms)
+- PHP 7.4+ (for contact form fallback)
 - Modern web browser
 
 ### Local Development Setup
 
 1. **Clone or Download the Repository**
    ```bash
-   cd "c:\Users\Arch Bishop\Documents\KISKAN LAW"
+   git clone <repository-url>
+   cd WANTEX
    ```
 
 2. **Start Local Server**
@@ -281,125 +245,43 @@ KISKAN LAW/
 ## 📖 Usage
 
 ### Navigation
-- **Home** - Overview of firm and services
-- **Our Story** - Dropdown menu with:
-  - The Firm
-  - Practice Areas
-  - People & Culture
-  - Portfolio
-  - Partnerships & CSR
-- **Insights** - Blog and legal developments
-- **Contact** - Get in touch with the firm
+- **Home** — Overview of insurance services and coverage options
+- **About Us** — Company story, mission, values, and FAQs
+- **Personal Insurance** — Dropdown menu with:
+  - Motor Insurance
+  - Health Insurance
+  - Travel Insurance
+  - Personal Accident Cover
+- **Property Insurance** — Dropdown menu with:
+  - Home & Property Insurance
+  - Business Insurance
+- **Contact** — Get a quote or reach out to the team
 
-### Practice Areas
-Each practice area has detailed information accessible via:
-- Main practice areas page
-- Direct anchor links from sidebar menus
-- Service cards on homepage
-
-### Contact Forms
-Multiple contact points throughout the site:
-- Main contact page form
-- Sidebar appointment booking forms
-- "Book an Appointment" button in header
+### Getting a Quote
+Multiple ways to request an insurance quote:
+- Fill out the online quote request form on the Contact page
+- Call directly at +254 700 000 000
+- Email at info@wantex.co.ke
+- Visit the office in Nairobi
 
 ---
 
 ## 📞 Contact Information
 
 ### Office Location
-**Kiskan Law Africa LLP Advocates**  
-Applewood Adams, Ngong Road  
+**Wantex Insurance Agency**  
 Nairobi, Kenya
 
 ### Contact Details
-- **📧 Email:** [info@kiskanlawafrica.co.ke](mailto:info@kiskanlawafrica.co.ke)
-- **📱 Phone:** +254 758 409 619
-- **🔗 LinkedIn:** [Kiskan Law Africa LLP Advocates](http://www.linkedin.com/in/kiskan-law-africa-llp-advocates-52954a382)
+- **📧 Email:** [info@wantex.co.ke](mailto:info@wantex.co.ke)
+- **📧 Claims:** [claims@wantex.co.ke](mailto:claims@wantex.co.ke)
+- **📱 Phone:** +254 700 000 000
+- **📱 Alt Phone:** +254 711 000 000
 
 ### Business Hours
-Monday - Friday: 9:00 AM - 5:00 PM  
+Monday – Friday: 8:00 AM – 5:00 PM  
 Saturday: By Appointment  
 Sunday: Closed
-
----
-
-## 🤝 Regional & International Affiliations
-
-### Law Firm Partnerships
-- **Aina Blankson Africa Attorneys** (Nigeria) - Pan-African legal services
-- **Great Styx Attorneys** (Tanzania) - East African dispute resolution
-
-### Non-Profit Affiliations
-- **Green Olive Foundation** - Education support for disadvantaged students
-- **Centre for Sports Law (CSL)** - Athletes' rights protection
-- **DAPMK** - Diabetes awareness and management
-- **Kituo Cha Sheria** - Human rights organization
-
----
-
-## 🏆 Our Esteemed Clients
-
-The firm proudly serves a diverse portfolio of clients including:
-- **IDEON Limited** - Business Process Outsourcing
-- **CEMES LTD** - Microfinance Consultancy
-- **AMACO** - Insurance Services
-- **RBA** - Retirement Benefits Authority
-- **HelpAge International** - Global Non-Profit
-- **The Kenyan Boys Choir** - Arts & Culture
-- **RUPHA** - Healthcare Association
-
----
-
-## 🛡️ Professional Compliance
-
-### Professional Indemnity Insurance
-✅ Valid for 2025-2026  
-✅ Liability limit capable of meeting client needs
-
-### Tax Compliance
-✅ Tax Compliance Certificate  
-✅ Valid for 2025
-
----
-
-## 👥 Credits
-
-### Development & Design
-**Powered by [Techcrast](https://techcrast.co.ke/)**  
-*Web Development & Digital Solutions*
-
-### Legal Team
-- **Managing Partner:** Bemih Kanyonge
-- **Associates:** Kisabit Kiprop, Mwikali Kasyoka, Nicole Msando, and team
-
-### Technologies
-- Bootstrap Framework
-- Font Awesome Icons
-- jQuery Library
-- Google Fonts
-- WOW.js Animations
-- Swiper.js Sliders
-
----
-
-## 📜 License
-
-© 2025 Kiskan Law Africa. All Rights Reserved.
-
-**Proprietary and Confidential**  
-This website and its contents are the property of Kiskan Law Africa LLP Advocates. Unauthorized reproduction, distribution, or use is strictly prohibited.
-
----
-
-## 📝 Version History
-
-| Version | Date | Changes |
-|---------|------|---------|
-| 1.0.0 | 2025 | Initial website launch |
-| 1.1.0 | 2025 | Added practice areas page with detailed sections |
-| 1.2.0 | 2025 | Enhanced partnerships and CSR page |
-| 1.3.0 | 2025 | Updated footer navigation and branding |
 
 ---
 
@@ -418,38 +300,63 @@ The site is configured for deployment on Vercel with serverless functions for co
 ```
 
 ### Other Hosting Options
-- **Netlify** - Drag and drop deployment
-- **GitHub Pages** - Static site hosting
-- **Traditional Hosting** - Upload via FTP to web server
+- **Netlify** — Drag and drop deployment
+- **GitHub Pages** — Static site hosting
+- **Traditional Hosting** — Upload via FTP to web server
+
+---
+
+## 👥 Credits
+
+### Development & Design
+**Powered by [Techcrast](https://techcrast.co.ke/)**  
+*Web Development & Digital Solutions*
+
+### Technologies
+- Bootstrap Framework
+- Font Awesome Icons
+- jQuery Library
+- Google Fonts
+- WOW.js Animations
+- Swiper.js Sliders
+
+---
+
+## 📜 License
+
+© 2025 Wantex Insurance Agency. All Rights Reserved.
+
+**Proprietary and Confidential**  
+This website and its contents are the property of Wantex Insurance Agency. Unauthorized reproduction, distribution, or use is strictly prohibited.
+
+---
+
+## 📝 Version History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 1.0.0 | 2025 | Initial website launch |
+| 1.1.0 | 2025 | Added insurance services page with detailed product sections |
+| 1.2.0 | 2025 | Enhanced contact forms and quote request functionality |
+| 1.3.0 | 2026 | Updated navigation links and coverage options |
 
 ---
 
 ## 🐛 Support & Issues
 
 For technical support or to report issues:
-- **Email:** [info@kiskanlawafrica.co.ke](mailto:info@kiskanlawafrica.co.ke)
-- **Website:** [https://techcrast.co.ke](https://techcrast.co.ke)
-
----
-
-## 🌟 Acknowledgments
-
-Special thanks to:
-- All team members of Kiskan Law Africa
-- Our valued clients and partners
-- The Techcrast development team
-- Open-source community for libraries and tools
+- **Email:** [info@wantex.co.ke](mailto:info@wantex.co.ke)
+- **Developer:** [https://techcrast.co.ke](https://techcrast.co.ke)
 
 ---
 
 <div align="center">
 
-**⚖️ Kiskan Law Africa LLP Advocates**
+**🛡️ Wantex Insurance Agency**
 
-*Excellence | Integrity | Client Success*
+*Comprehensive Coverage | Trusted Partners | Peace of Mind*
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=social&logo=linkedin)](http://www.linkedin.com/in/kiskan-law-africa-llp-advocates-52954a382)
-[![Website](https://img.shields.io/badge/Visit-Website-success?style=social&logo=google-chrome)](https://kiskanlawafrica.co.ke)
+[![Website](https://img.shields.io/badge/Visit-Website-success?style=social&logo=google-chrome)](https://wantex.co.ke)
 
 ---
 
