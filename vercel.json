@@ -1,4 +1,6 @@
 {
+  "buildCommand": "",
+  "outputDirectory": ".",
   "headers": [
     {
       "source": "/(.*)",
@@ -11,7 +13,11 @@
     }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/index.html" }
-  ]
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/about", "destination": "/about.html" },
+    { "source": "/contact", "destination": "/contact.html" },
+    { "source": "/insurance-services", "destination": "/insurance-services.html" }
+  ],
+  "cleanUrls": true
 }
 
