@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             
+            // Close mobile menu if open
+            document.body.classList.remove('mobile-menu-visible');
+            
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
